@@ -1,3 +1,4 @@
+import './js/00-api';
 import './js/01-mobile-menu';
 import './js/02-quote';
 import './js/03-exercises';
