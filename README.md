@@ -58,5 +58,8 @@ write what we did (changed) etc.
 - `Look at Figma layout`
   [**Layout Figma**](<https://www.figma.com/file/3YBuCzICArJy5wROjNiOTB/YourEnergy-(Copy)?type=design&node-id=44%3A2373&mode=dev>)
 
+- `Look at Swagger Schema`
+  [**Swagger Schema**](https://your-energy.b.goit.study/api-docs/#/)
+
 - npm install
 - npm run dev
