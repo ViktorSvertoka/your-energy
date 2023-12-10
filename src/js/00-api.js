@@ -71,10 +71,13 @@ export default class APIService {
     }
   }
 
-  async postSubscriptions(email) {
+  async postSubscriptions(emailData) {
     try {
       this.page += 1;
-      const response = await axios.post(`${this.baseURL}subscription`, email);
+      const response = await axios.post(
+        `${this.baseURL}subscription`,
+        emailData
+      );
 
       return response.data;
     } catch (error) {
