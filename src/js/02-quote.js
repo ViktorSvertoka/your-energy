@@ -17,7 +17,7 @@ async function quote() {
 
 function displayQuote({ author, quote }) {
   quoteOfTheDay.innerHTML = `
-  <p class="text__quote">${quote}</p>
-  <h4 class="text__author">${author}</h4>
+  <p class="quote__text">${quote}</p>
+  <h4 class="quote__author">${author}</h4>
     `;
 }
