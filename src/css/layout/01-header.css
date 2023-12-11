@@ -1,1 +1,98 @@
 /* header styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #f4f4f4;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #242424;
+}
+.burger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  z-index: 1000;
+  color: #242424;
+}
+@media only screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+}
+
+.social-media {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  color: #242424;
+}
+
+.social-media svg {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .social-media svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    cursor: pointer;
+  }
+}
+.toggle-buttons {
+  width: 233px;
+  height: 52px;
+  font-size: 16px;
+  background-color: #242424;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  gap: 18px;
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .toggle-buttons {
+    width: 233px;
+    height: 52px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .toggle-buttons {
+    width: 265px;
+    height: 52px;
+  }
+}
+
+.toggle-buttons button {
+  width: 74px;
+  height: 36px;
+  background-color: #f4f4f4;
+  border-radius: 30px;
+  font-family: DM Sans, sans-serif;
+  font-size: 16px;
+  color: #242424;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .toggle-buttons {
+    display: none;
+  }
+}
+.toggle-buttons button.active {
+  background-color: #242424;
+  color: #f4f4f4;
+}
