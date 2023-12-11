@@ -35,9 +35,8 @@ export default class APIService {
 
   async getFilter(params) {
     try {
-      this.page += 1;
       const response = await axios.get(
-        `${this.baseURL}filters?filter=${params}&page=${this.page}`
+        `${this.baseURL}filters?filter=${params}`
       );
 
       return response.data.results;
