@@ -8,16 +8,20 @@ body {
 .header {
   background-color: #f4f4f4;
   color: #fff;
-  padding: 10px;
+  padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 1.5rem;
   cursor: pointer;
+<<<<<<< Updated upstream
+  align-self: center;
+=======
   color: #242424;
+  width: 132px;
+  height: 24px;
 }
 .burger-menu {
   position: fixed;
@@ -31,24 +35,39 @@ body {
   .burger-menu {
     display: none;
   }
+>>>>>>> Stashed changes
 }
 
 .social-media {
   list-style: none;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   color: #242424;
 }
+<<<<<<< Updated upstream
+@media only screen and (max-width: 767px) {
+  .social-media {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .social-media svg {
+    width: 44px;
+    height: 44px;
+=======
 
 .social-media svg {
-  display: none;
+  /* display: none; */
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 481px) {
   .social-media svg {
     width: 24px;
     height: 24px;
-    fill: #fff;
+>>>>>>> Stashed changes
+    fill: #242424;
     cursor: pointer;
+    gap: 12px;
   }
 }
 .toggle-buttons {
@@ -95,4 +114,17 @@ body {
 .toggle-buttons button.active {
   background-color: #242424;
   color: #f4f4f4;
+}
+.icon {
+  color: #242424;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  z-index: 1000;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .icon {
+    display: none;
+  }
 }
