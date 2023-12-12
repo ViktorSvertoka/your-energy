@@ -1,1 +1,6 @@
 /* footer styles */
+.footer__container {
+  padding-bottom: 10px;
+  padding-top: 40px;
+  background-color: black;
+}
