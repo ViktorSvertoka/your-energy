@@ -17,10 +17,10 @@ function displayExercises(data) {
   const markup = data
     .map(({ filter, name, imgURL }) => {
       return `
-  <li class="muscles__item">
-  <h2 class="muscles__title">${filter}</h2>
-  <p class="muscles__text">${name}</p>
-  <img src="${imgURL}" class="muscles__img"></img>
+  <li class="filters__item">
+  <h2 class="filters__title">${filter}</h2>
+  <p class="filters__text">${name}</p>
+  <img src="${imgURL}" class="filters__img"></img>
   </li>
     `;
     })
