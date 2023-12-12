@@ -4,6 +4,8 @@ const muscleList = document.querySelector('.js-list');
 
 getFiltersExercises('Muscles');
 
+let items;
+
 async function getFiltersExercises(params) {
   try {
     const data = await apiService.getFilter(params);
@@ -18,15 +20,34 @@ function displayExercises(data) {
     .map(({ filter, name, imgURL }) => {
       return `
   <li class="filters__item">
-  <h2 class="filters__title">${filter}</h2>
-  <p class="filters__text">${name}</p>
-  <img src="${imgURL}" class="filters__img"></img>
+  <h2 class="filters__title-first">${filter}</h2>
+  <p class="filters__text-first">${name}</p>
+  <img class="filters__img-first" src="${imgURL}"></img>
   </li>
     `;
     })
     .join('');
 
   muscleList.insertAdjacentHTML('beforeend', markup);
+  items = document.querySelectorAll('.filters__item');
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const filter = item.children[0].innerText.toLowerCase();
+      const name = item.children[1].innerText.toLowerCase();
+
+      exercises();
+
+      async function exercises() {
+        try {
+          const data = await apiService.getExercises(filter, name);
+
+          renderExercises(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    });
+  });
 }
 
 document.querySelectorAll('.btnFilters').forEach(button => {
@@ -36,3 +57,21 @@ document.querySelectorAll('.btnFilters').forEach(button => {
     getFiltersExercises(params);
   });
 });
+
+function renderExercises(data) {
+  muscleList.innerHTML = '';
+  const markup = data
+    .map(({ name, burnedCalories, bodyPart, target }) => {
+      return `
+  <li class="filters__item">
+  <h2 class="filters__title-second">${name}</h2>
+  <p class="filters__text-second"><span>Burned calories:</span>${burnedCalories}</p>
+  <p class="filters__text-second"><span>Body part:</span>${bodyPart}</p>
+  <p class="filters__text-second"><span>Target:</span>${target}</p>
+  </li>
+    `;
+    })
+    .join('');
+
+  muscleList.insertAdjacentHTML('beforeend', markup);
+}
