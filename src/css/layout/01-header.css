@@ -16,7 +16,26 @@ body {
 
 .logo {
   cursor: pointer;
+<<<<<<< Updated upstream
   align-self: center;
+=======
+  color: #242424;
+  width: 132px;
+  height: 24px;
+}
+.burger-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  z-index: 1000;
+  color: #242424;
+}
+@media only screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
+>>>>>>> Stashed changes
 }
 
 .social-media {
@@ -25,6 +44,7 @@ body {
   gap: 12px;
   color: #242424;
 }
+<<<<<<< Updated upstream
 @media only screen and (max-width: 767px) {
   .social-media {
     display: none;
@@ -35,8 +55,19 @@ body {
   .social-media svg {
     width: 44px;
     height: 44px;
+=======
+
+.social-media svg {
+  /* display: none; */
+}
+@media only screen and (min-width: 481px) {
+  .social-media svg {
+    width: 24px;
+    height: 24px;
+>>>>>>> Stashed changes
     fill: #242424;
     cursor: pointer;
+    gap: 12px;
   }
 }
 .toggle-buttons {
