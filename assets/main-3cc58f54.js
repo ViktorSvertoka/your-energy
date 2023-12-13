@@ -15,6 +15,7 @@
   </li>
     `).join("");q.insertAdjacentHTML("beforeend",t),be=document.querySelectorAll(".filters__item"),be.forEach(n=>{n.addEventListener("click",()=>{const r=n.children[0].innerText.toLowerCase(),s=n.children[1].innerText.toLowerCase();o();async function o(){try{const i=await Me.getExercises(r,s);hn(i)}catch(i){console.log(i)}}})})}document.querySelectorAll(".btnFilters").forEach(e=>{e.addEventListener("click",()=>{const t=e.innerText;q.innerHTML="",$e(t)})});function hn(e){q.innerHTML="";const t=e.map(({name:n,burnedCalories:r,bodyPart:s,target:o})=>`
   <li class="filters__item">
+  <p class="filters__pre-title-second"></p>
   <button class="filters__btn-second" type="button">svg</button>
   <h2 class="filters__title-second">${n}</h2>
   <p class="filters__text-second"><span>Burned calories:</span>${r}</p>
