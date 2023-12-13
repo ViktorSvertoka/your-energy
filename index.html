@@ -8,11 +8,14 @@
       name="description"
       content="Elevate your fitness journey with our sports app! Dive into a world of dynamic workouts, personalized exercises, and a comprehensive inventory of fitness gear. Whether you're a seasoned athlete or just starting, our app is your go-to destination for effective sports exercises and top-notch equipment. Achieve your fitness goals in style, download now!"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-d6e25f0d.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-205982df.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-f698835f.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-e899479c.css">
   </head>
   <body>
     <header>
@@ -69,7 +72,7 @@
     <div class="hero">
       <div class="hero__icon-title">
         <svg class="hero__icon" width="38" height="38">
-          <use href="/your-energy/assets/sprite-cdbad28e.svg#icon-sun"></use>
+          <use href="/your-energy/assets/sprite-77336dc9.svg#icon-sun"></use>
         </svg>
         <h1 class="hero__title">
           Get <span class="hero__title-part">Body</span> in <br />shape, Stay
@@ -150,85 +153,106 @@
 
     <footer>
       <!-- footer -->
-<div class="footer__container container" id="">
-  <div class="logo" id="logo">
-    <svg
-      class="footer__logo logo"
-      width="132"
-      height="24"
-      aria-label="scroll down icon"
-    >
-      <use href="../img/sprite.svg#icon-logo"></use>
-    </svg>
+<div class="footer__background">
+  <div class="footer__container container" id="">
+    <div class="footer__left-wrap">
+      <div class="logo" id="logo">
+        <svg
+          class="footer__logo logo"
+          width="132"
+          height="24"
+          aria-label="scroll down icon"
+        >
+          <use href="../img/sprite.svg#icon-logo"></use>
+        </svg>
+      </div>
+      <ul class="socials__list">
+        <li>
+          <a
+            class="socials__link link"
+            href="https://www.facebook.com/goITclub/"
+            aria-label=""
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="facebook icon"
+          >
+            <svg
+              class="socials__icon socials__icon-footer"
+              width="7"
+              height="17"
+            >
+              <use href="../img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="socials__link link"
+            href="https://www.instagram.com/goitclub/"
+            aria-label="instagram icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="socials__icon socials__icon-footer"
+              width="24"
+              height="24"
+            >
+              <use href="../img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="socials__link link"
+            href="https://www.youtube.com/c/GoIT"
+            aria-label="youtube icon"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="socials__icon socials__icon-footer"
+              width="24"
+              height="24"
+            >
+              <use href="../img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__right-wrap">
+      <h2 class="footer__title">
+        Transforming your <span class="accent-text">body</span> shape with us
+      </h2>
+      <form class="subscribe__form">
+        <h3 class="subscribe__form-title">
+          Subscribe and learn about new exercises!
+        </h3>
+        <input
+          class="subscribe__form-input"
+          type="email"
+          name="user-email"
+          placeholder="Email"
+        />
+        <button class="subscribe__form-btn" type="submit" id="submitButton">
+          Send
+        </button>
+      </form>
+    </div>
+    <div class="footer__text-outer-wrap">
+      <div>
+        <p class="footer__text">Your Energy. All rights reserved.</p>
+      </div>
+      <div class="footer__text-inner-wrap">
+        <p class="footer__text privacy-policy__text">
+          <span>Privacy Policy</span><span>&sol;</span
+          ><span>Terms of Service</span>
+        </p>
+        <p class="footer__text">©2023</p>
+      </div>
+    </div>
   </div>
-
-  <ul>
-    <li>
-      <a
-        class="socials__icon socials__icon-footer"
-        href="https://www.facebook.com/goITclub/"
-        width="28"
-        heigh="28"
-        aria-label=""
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="facebook icon"
-      >
-        <svg>
-          <use href="../img/sprite.svg#icon-facebook"></use>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a
-        class="socials__icon socials__icon-footer"
-        href="https://www.instagram.com/goitclub/"
-        width="28"
-        heigh="28"
-        aria-label="instagram icon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg>
-          <use href="../img/sprite.svg#icon-instagram"></use>
-        </svg>
-      </a>
-    </li>
-    <li>
-      <a
-        class="socials__icon socials__icon-footer"
-        href="https://www.youtube.com/c/GoIT"
-        width="28"
-        heigh="28"
-        aria-label="youtube icon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg>
-          <use href="../img/sprite.svg#icon-youtube"></use>
-        </svg>
-      </a>
-    </li>
-  </ul>
-  <h2 class="footer__title">Transforming your body shape with us</h2>
-
-  <form class="subscribe__form">
-    <h3 class="subscribe__title">Subscribe and learn about new exercises!</h3>
-    <input
-      class="subscribe__form-input"
-      type="email"
-      name="user-email"
-      placeholder="Email"
-    />
-
-    <button class="subscribe__form-btn" type="submit" id="submitButton">
-      Send
-    </button>
-  </form>
-  <p>Your Energy. All rights reserved.</p>
-  <p>Privacy Policy &sol; Terms of Service</p>
-
-  <p>&#9400; 2023</p>
 </div>
 
       <!-- modal-exercises -->
