@@ -20,9 +20,11 @@ function displayExercises(data) {
     .map(({ filter, name, imgURL }) => {
       return `
   <li class="filters__item">
-  <h2 class="filters__title-first">${filter}</h2>
-  <p class="filters__text-first">${name}</p>
-  <img class="filters__img-first" src="${imgURL}"></img>
+   <img class="filters__img-first" src="${imgURL}"></img>
+   <div class="filters__wrapper-first">
+   <h2 class="filters__title-first">${filter}</h2>
+   <p class="filters__text-first">${name}</p>
+   </div>
   </li>
     `;
     })
