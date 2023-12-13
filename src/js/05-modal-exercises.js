@@ -4,11 +4,11 @@ const apiService = new APIService();
 const modalExercises = document.querySelector('.modal-exercises');
 const overlay = document.querySelector('.overlay');
 const modalOpen = document.querySelector('.filters__btn-second');
-console.log(modalOpen);
+const listItem = document.querySelector('.js-list');
+
+listItem.addEventListener('click', onExercisesCardClick);
 
 // modalOpen.addEventListener('click', onExercisesCardClick);
-
-// function onExercisesCardClick(event) {}
 
 // addModalListener(exercisesList);
 
@@ -18,41 +18,42 @@ console.log(modalOpen);
 //   }
 //   listRef.addEventListener('click', onExercisesCardClick);
 
-//   async function onExercisesCardClick(event) {
-//     if (!event.target.closest('.filters__item')) {
-//       return;
-//     }
+async function onExercisesCardClick(event) {
+  if (!event.target.closest('.filters__item')) {
+    return;
+  }
 
-//     try {
-//       const exerciseID = e.target
-//         .closest('.filters__item')
-//         .getAttribute('data-id');
-//       const exerciseData = await apiService.getExercisesById(exerciseID);
-//       const markup = createMarkup(exerciseData);
-//       updateModal(markup);
-//       btnModalClose.addEventListener('click', closeModalExercises);
-//       openModalExercises();
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
+  //   item.addEventListener('click', console.log('ku ku'));
 
-//   function openModalExercises() {
-//     const lockPaddingValue =
-//       window.innerWidth - document.body.offsetWidth + 'px';
+  //   try {
+  const exerciseID = event.target;
 
-//     modalExercises.classList.remove('hidden');
-//     overlay.classList.remove('hidden');
-//     document.body.style.paddingRight = lockPaddingValue;
-//     document.body.style.overflow = 'hidden';
-//   }
+  console.log(exerciseID);
+  //     const exerciseData = await apiService.getExercisesById(exerciseID);
+  //     const markup = createMarkup(exerciseData);
+  //     updateModal(markup);
+  //     btnModalClose.addEventListener('click', closeModalExercises);
+  //     openModalExercises();
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+}
 
-//   function updateModal(markup) {
-//     modalExercises.innerHTML = markup;
-//   }
+// function openModalExercises() {
+//   const lockPaddingValue = window.innerWidth - document.body.offsetWidth + 'px';
+
+//   modalExercises.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+//   document.body.style.paddingRight = lockPaddingValue;
+//   document.body.style.overflow = 'hidden';
 // }
 
-// // Треба вставити .map і .join('') але поки що не розумію як і куди. Також у нас гівка приходить різного розміру треба зробити srcset
+// function updateModal(markup) {
+//   modalExercises.innerHTML = markup;
+// }
+// // // }
+
+// // // Треба вставити .map і .join('') але поки що не розумію як і куди. Також у нас гівка приходить різного розміру треба зробити srcset
 // function createMarkup({
 //   _id,
 //   bodyPart,

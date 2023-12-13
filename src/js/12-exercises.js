@@ -8,7 +8,7 @@ async function onCardClick(e) {
   if (!e.target.closest('.filters__item')) {
     return;
   }
-
+  listItem.removeEventListener('click', onCardClick);
   const item = e.target.closest('.filters__item');
 
   const filter = item.children[0].innerText.toLowerCase();
@@ -23,13 +23,14 @@ async function onCardClick(e) {
 }
 
 function renderExercises(data) {
+  console.log(data[0]._id);
   listItem.innerHTML = '';
   const markup = data
-    .map(({ name, burnedCalories, bodyPart, target }) => {
+    .map(({ _id, name, burnedCalories, bodyPart, target }) => {
       return `
   <li class="filters__item">
     <p class="filters__pre-title-second"></p>
-    <button class="filters__btn-second" type="button">svg</button>
+    <button class="filters__btn-second" data-id="${_id}" type="button">svg</button>
     <h2 class="filters__title-second">${name}</h2>
     <p class="filters__text-second"><span>Burned calories:</span>${burnedCalories}</p>
     <p class="filters__text-second"><span>Body part:</span>${bodyPart}</p>

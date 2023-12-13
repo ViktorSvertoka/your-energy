@@ -10,8 +10,6 @@ export default class APIService {
     this.page = 0;
   }
 
-  // https://your-energy.b.goit.study/api/exercises?equipment=cable&page=1&limit=10
-
   async getExercises(params1, params2) {
     try {
       this.page += 1;
