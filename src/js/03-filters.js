@@ -66,6 +66,7 @@ function renderExercises(data) {
     .map(({ name, burnedCalories, bodyPart, target }) => {
       return `
   <li class="filters__item">
+  <button class="filters__btn-second" type="button">svg</button>
   <h2 class="filters__title-second">${name}</h2>
   <p class="filters__text-second"><span>Burned calories:</span>${burnedCalories}</p>
   <p class="filters__text-second"><span>Body part:</span>${bodyPart}</p>
