@@ -1,27 +1,21 @@
-// document.addEventListener('scroll', handleScroll);
-// // get a reference to our predefined button
-// let scrollToTopBtn = document.querySelector('.scroll__top');
+const goTopBtn = document.querySelector('.scroll__go-top');
 
-// function handleScroll() {
-//   let scrollableHeight =
-//     document.documentElement.scrollHeight -
-//     document.documentElement.clientHeight;
-//   let GOLDEN_RATIO = 0.1;
+goTopBtn.addEventListener('click', goTop);
+window.addEventListener('scroll', trackScroll);
 
-//   if (document.documentElement.scrollTop / scrollableHeight > GOLDEN_RATIO) {
-//     //show button
-//     scrollToTopBtn.style.display = 'block';
-//   } else {
-//     //hide button
-//     scrollToTopBtn.style.display = 'none';
-//   }
-// }
+function trackScroll() {
+  const offset = window.pageYOffset;
+  const coords = document.documentElement.clientHeight;
+  if (offset > coords) {
+    goTopBtn.classList.add('scroll__go-top--show');
+  } else {
+    goTopBtn.classList.remove('scroll__go-top--show');
+  }
+}
 
-// scrollToTopBtn.addEventListener('click', scrollToTop);
-
-// function scrollToTop() {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: 'smooth',
-//   });
-// }
+function goTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -75);
+    setTimeout(goTop, 0);
+  }
+}
