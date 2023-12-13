@@ -1,8 +1,14 @@
-// import APIService from './00-api';
-// const apiService = new APIService();
+import APIService from './00-api';
+const apiService = new APIService();
 
-// const modalExercises = document.querySelector('.modal-exercises');
-// const overlay = document.querySelector('.overlay');
+const modalExercises = document.querySelector('.modal-exercises');
+const overlay = document.querySelector('.overlay');
+const modalOpen = document.querySelector('.filters__btn-second');
+console.log(modalOpen);
+
+// modalOpen.addEventListener('click', onExercisesCardClick);
+
+// function onExercisesCardClick(event) {}
 
 // addModalListener(exercisesList);
 
