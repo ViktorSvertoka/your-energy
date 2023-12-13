@@ -43,9 +43,9 @@ function showModal() {
   modal.style.display = 'block';
 }
 
-function closeModal() {
-  modal.style.display = 'none';
-}
+// function closeModal() {
+//   modal.style.display = 'none';
+// }
 
 toggleButtons.addEventListener('click', toggleButtonsFunction);
 burgerMenu.addEventListener('click', openMobileMenu);
