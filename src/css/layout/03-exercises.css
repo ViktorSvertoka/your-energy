@@ -1,6 +1,6 @@
 /* exercises styles */
 
-.exersices__list {
+/* .exersices__list {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -22,4 +22,29 @@
     line-height: 1.09;
     letter-spacing: -0.88px;
   }
+} */
+
+.filters__list {
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 32px;
+}
+
+.filters__item {
+  flex-basis: calc((100% - 15px) / 3);
+  width: 290px;
+
+  position: relative;
+}
+
+.filters__img-first {
+  width: 100%;
+}
+
+.filters__wrapper-first {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
