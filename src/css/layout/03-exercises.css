@@ -1,1 +1,25 @@
 /* exercises styles */
+
+.exersices__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.exersices__title {
+  padding-bottom: 20px;
+  color: #242424;
+  font-size: 28px;
+  line-height: 1.35;
+  letter-spacing: -0.56px;
+}
+
+@media screen and (min-width: 375px) {
+  .exersices__title {
+    padding-bottom: 32px;
+    color: #242424;
+    font-size: 44px;
+    line-height: 1.09;
+    letter-spacing: -0.88px;
+  }
+}
