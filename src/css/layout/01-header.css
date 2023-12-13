@@ -1,9 +1,13 @@
 /* header styles */
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-} */
+.section {
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-bottom: 64px;
+  }
+}
 
 .header {
   background-color: #f4f4f4;
@@ -25,13 +29,13 @@
   gap: 12px;
   color: #242424;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .social-media {
     display: none;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .social-media svg {
     width: 44px;
     height: 44px;
@@ -52,13 +56,8 @@
   padding: 0 14px;
   gap: 18px;
 }
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .toggle-buttons {
-    width: 233px;
-    height: 52px;
-  }
-}
-@media only screen and (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .toggle-buttons {
     width: 265px;
     height: 52px;
@@ -76,7 +75,7 @@
   border: none;
   cursor: pointer;
 }
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .toggle-buttons {
     display: none;
   }
@@ -93,7 +92,7 @@
   z-index: 1000;
   display: block;
 }
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .icon {
     display: none;
   }

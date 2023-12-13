@@ -1,43 +1,53 @@
 <!-- header -->
-<section>
-  <header class="header">
-    <div class="logo" id="logo">
-      <a href="../partials/02-hero.html" target="_blank"
-        ><svg width="132" height="24">
-          <use href="../img/sprite.svg#icon-Logo"></use></svg
-      ></a>
-    </div>
-    <nav>
-      <div class="toggle-buttons" id="toggleButtons">
-        <button id="homeButton" class="active js-open-home">Home</button>
-        <button id="favoritesButton" class="js-open-favorites">
-          Favorites
-        </button>
+<section class="section">
+  <div class="container">
+    <div class="header" role="banner">
+      <div class="logo" id="logo">
+        <a href="../partials/02-hero.html">
+          <svg width="132" height="24">
+            <use href="../img/sprite.svg#icon-Logo"></use>
+          </svg>
+        </a>
       </div>
-    </nav>
-    <div class="burger-menu" id="burgerMenu">
-      <a href="#">
-        <svg class="icon icon-align-justify" width="32" height="32">
-          <use href="../img/sprite.svg#icon-Frame-instagram"></use>
-        </svg>
-      </a>
+      <nav>
+        <div class="toggle-buttons" id="toggleButtons">
+          <button id="homeButton" class="active js-open-home">Home</button>
+          <button id="favoritesButton" class="js-open-favorites">
+            Favorites
+          </button>
+        </div>
+      </nav>
+      <div class="burger-menu" id="burgerMenu">
+        <a href="#">
+          <svg class="icon icon-align-justify" width="32" height="32">
+            <use href="../img/sprite.svg#icon-Frame-instagram"></use>
+          </svg>
+        </a>
+      </div>
+      <ul class="social-media" id="socialMedia">
+        <li>
+          <a href="https://www.facebook.com/goITclub/" target="_blank">
+            <svg><use href="../img/sprite.svg#icon-Frame-facebook"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/goitclub/" target="_blank">
+            <svg><use href="../img/sprite.svg#icon-Frame-instagram"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/c/GoIT" target="_blank">
+            <svg><use href="../img/sprite.svg#icon-Frame-youtube"></use></svg>
+          </a>
+        </li>
+      </ul>
     </div>
-    <ul class="social-media" id="socialMedia">
-      <li>
-        <a href="https://www.facebook.com/goITclub/" target="_blank"
-          ><svg><use href="../img/sprite.svg#icon-Frame-facebook"></use></svg
-        ></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/goitclub/" target="_blank"
-          ><svg><use href="../img/sprite.svg#icon-Frame-instagram"></use></svg
-        ></a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/c/GoIT" target="_blank"
-          ><svg><use href="../img/sprite.svg#icon-Frame-youtube"></use></svg
-        ></a>
-      </li>
-    </ul>
-  </header>
+  </div>
 </section>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <div id="modalContent"></div>
+  </div>
+</div>
