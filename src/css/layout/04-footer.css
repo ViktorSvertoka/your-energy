@@ -1,6 +1,250 @@
 /* footer styles */
-.footer__container {
-  padding-bottom: 10px;
-  padding-top: 40px;
+.footer__background {
   background-color: black;
+}
+
+.footer__container {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 64px;
+    padding-bottom: 16px;
+  }
+}
+
+.footer__logo {
+  fill: var(--color-white);
+}
+
+.socials__list {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .socials__list {
+    margin-top: 32px;
+  }
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  outline: 1px solid rgba(244, 244, 244, 0.1);
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .socials__link {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.socials__icon-footer {
+  fill: var(--color-white);
+}
+
+@media screen and (min-width: 768px) {
+  .footer__right-wrap {
+    width: 434px;
+    margin-left: 114px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__right-wrap {
+    display: flex;
+
+    width: 1062px;
+    gap: 115px;
+  }
+}
+
+.footer__title {
+  margin-top: 40px;
+  color: var(--color-white);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.76px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__title {
+    margin-top: 0px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: -1.12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__title {
+    width: 595px;
+  }
+}
+
+.accent-text {
+  font-style: italic;
+}
+
+.subscribe__form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  gap: 20px;
+  margin-top: 20px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28px;
+}
+
+@media screen and (min-width: 375px) {
+  .subscribe__form {
+    width: 335px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form {
+    margin-top: 40px;
+    width: 352px;
+    font-size: 16px;
+    line-height: 1.5px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .subscribe__form {
+    margin-top: 0px;
+  }
+}
+
+.subscribe__form-title {
+  margin-top: 20px;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form-title {
+    margin-top: 0px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .subscribe__form-title {
+    margin-top: 0px;
+  }
+}
+
+.subscribe__form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 30px;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-black);
+
+  color: rgba(244, 244, 244, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form-input {
+    height: 48px;
+  }
+}
+
+.subscribe__form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 42px;
+
+  padding: 12px 0px;
+  border-radius: 30px;
+  background-color: var(--color-white);
+  border: none;
+
+  font-size: 14px;
+  line-height: 1.28px;
+  color: var(--color-black);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__form-btn {
+    height: 48px;
+
+    font-size: 16px;
+    line-height: 1.5px;
+  }
+}
+
+.footer__text {
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.28px;
+  color: var(--color-light-grey-secondary);
+  opacity: 0.9;
+}
+
+.footer__text-outer-wrap {
+  margin-top: 120px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__text-outer-wrap {
+    display: flex;
+    width: 704px;
+    gap: 78px;
+    margin-top: 64px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__text-outer-wrap {
+    width: 1068px;
+    gap: 122px;
+    margin-top: 70px;
+  }
+}
+
+.footer__text-inner-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__text-inner-wrap {
+    margin-top: 0px;
+    gap: 178px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer__text-inner-wrap {
+    gap: 498px;
+  }
+}
+.privacy-policy__text {
+  display: flex;
+  gap: 8px;
 }
