@@ -34,7 +34,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 704px;
     padding: 0 32px;
   }
 }

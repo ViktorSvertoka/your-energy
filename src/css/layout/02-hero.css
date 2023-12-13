@@ -7,7 +7,6 @@
     .section {
         padding-bottom: 64px;
     }
-
 }
 
 .hero {
@@ -26,6 +25,7 @@
         right: 0;
         width: 168px;
         height: 100px;
+        border-radius: 20px;
     }
 }
 
@@ -47,7 +47,6 @@
         width: 59px;
         height: 59px;
     }
-
 }
 
 .hero__title {
@@ -78,11 +77,16 @@
     width: 100%;
     color: var(--color-black);
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.29;
     letter-spacing: -0.28px;
     margin-bottom: 20px;
+}
+
+@media screen and (min-width: 375px) {
+    .hero__subtitle {
+        width: 335px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -105,10 +109,9 @@
     }
 }
 
-.hero__image {
+.hero__image img {
     border-radius: 30px;
     width: 100%;
-    height: 460px;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -117,7 +120,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .hero__image {
+    .hero__image img {
         width: 704px;
         height: 550px;
         border-radius: 60px;
@@ -126,7 +129,7 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .hero__image {
+    .hero__image img {
         display: flex;
         width: 100%;
         height: 350px;
