@@ -19,14 +19,14 @@ listItem.addEventListener('click', onExercisesCardClick);
 //   listRef.addEventListener('click', onExercisesCardClick);
 
 async function onExercisesCardClick(event) {
-  if (!event.target.closest('.filters__item')) {
+  if (!event.target.closest('.filters__btn-second')) {
     return;
   }
 
-  //   item.addEventListener('click', console.log('ku ku'));
-
   //   try {
-  const exerciseID = event.target;
+  const exerciseID = event.target
+    .closest('.filters__btn-second')
+    .getAttribute('data-id');
 
   console.log(exerciseID);
   //     const exerciseData = await apiService.getExercisesById(exerciseID);
