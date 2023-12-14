@@ -14,8 +14,8 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-47f855f3.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-d11a2b2f.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-c20b3383.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-34481113.css">
   </head>
   <body>
     <header>
@@ -132,14 +132,11 @@
 <section class="section">
   <div class="exersices__container container">
     <h2 class="exersices__title">Exercises</h2>
-    <form action="">
-      <input class="exersices__input" type="text" />
-      <button class="exersices__search" type="button">start</button>
-    </form>
-
     <ul class="exersices__list">
       <li>
-        <button class="exercises__btn btnFilters" type="button">Muscles</button>
+        <button class="exercises__btn btnFilters active" type="button">
+          Muscles
+        </button>
       </li>
       <li>
         <button class="exercises__btn btnFilters" type="button">
@@ -154,14 +151,29 @@
     </ul>
   </div>
 
-  <div class="quote__container container">
-    <h3 class="quote__title">Quote of the day</h3>
-    <div class="quote__wrapper js-quote"></div>
+  <div class="quote-filters__container container">
+    <div class="quote__container">
+      <h3 class="quote__title">Quote of the day</h3>
+      <div class="quote__wrapper js-quote"></div>
+    </div>
+
+    <div class="filters__container">
+      <ul class="filters__list js-list"></ul>
+    </div>
   </div>
 
-  <div class="filters__container container">
-    <ul class="filters__list js-list"></ul>
-  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.exercises__btn');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          buttons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+        });
+      });
+    });
+  </script>
 </section>
 
     </main>
