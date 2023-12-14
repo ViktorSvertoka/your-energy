@@ -17,7 +17,7 @@
     display: none;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
     .hero__pic {
         position: absolute;
         display: inline-flex;
@@ -52,6 +52,7 @@
 .hero__title {
     text-indent: 50px;
     width: 100%;
+    font-family: DMSans-Regular;
     color: var(--color-black);
     font-size: 38px;
     font-weight: 400;
@@ -75,6 +76,7 @@
 
 .hero__subtitle {
     width: 100%;
+    font-family: DMSans-Regular;
     color: var(--color-black);
     font-size: 14px;
     font-weight: 400;
@@ -99,7 +101,7 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
     .hero__subtitle {
         width: 500px;
         font-size: 18px;
@@ -128,7 +130,7 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
     .hero__image img {
         display: flex;
         width: 100%;
@@ -154,7 +156,7 @@
     }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
     .hero__hashtags {
         position: absolute;
         top: 144px;
@@ -171,24 +173,35 @@
 
 .hero__hashtag {
     display: flex;
-    padding: 4px 12px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+}
+
+.hero__hashtag-text {
+    color: var(--color-black);
+    font-family: DMSans-Regular;
+    font-size: 14px;
+    line-height: 1.28;
+    padding: 4px 12px;
+    letter-spacing: -0.1px;
     border-radius: 30px;
     border: 1px solid var(--color-black);
-    line-height: 1.28;
 }
 
 @media screen and (min-width: 768px) {
-    .hero__hashtag {
+    .hero__hashtag-text {
         padding: 4px 16px;
         line-height: 1.5;
     }
 }
 
-@media screen and (min-width: 1280px) {
-    .hero__hashtag {
+@media screen and (min-width: 1440px) {
+    .hero__hashtag-text {
         padding: 4px 16px;
     }
+}
+
+.hero__hashtags a:hover {
+    background: rgba(36, 36, 36, 0.80);
+    color: var(--color-white);
 }
