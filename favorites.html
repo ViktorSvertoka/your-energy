@@ -14,8 +14,8 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-f8fa7c04.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-57d3963a.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-9d9ababb.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-31471da4.css">
   </head>
   <body>
     <header>
@@ -41,7 +41,7 @@
       <div class="burger-menu" id="burgerMenu">
         <a href="#">
           <svg class="icon icon-align-justify" width="32" height="32">
-            <use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-instagram"></use>
+            <use href="/your-energy/assets/sprite-030e182b.svg#icon-align-justify"></use>
           </svg>
         </a>
       </div>
@@ -66,10 +66,34 @@
   </div>
 </section>
 
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal" class="close">&times;</span>
-    <div id="modalContent"></div>
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content" id="modalContent">
+    <nav>
+      <div class="toggle-buttons" id="toggleButtons">
+        <button id="homeButton" class="active js-open-home">Home</button>
+        <button id="favoritesButton" class="js-open-favorites">
+          Favorites
+        </button>
+      </div>
+    </nav>
+    <ul class="social-media" id="socialMedia">
+      <li>
+        <a href="https://www.facebook.com/goITclub/" target="_blank">
+          <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-facebook"></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/goitclub/" target="_blank">
+          <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-instagram"></use></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/c/GoIT" target="_blank">
+          <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-youtube"></use></svg>
+        </a>
+      </li>
+    </ul>
+    <button id="closeModal" class="close">&times;</button>
   </div>
 </div>
 
