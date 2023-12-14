@@ -4,12 +4,11 @@ const listItem = document.querySelector('.js-list');
 
 listItem.addEventListener('click', onCardClick);
 
-async function onCardClick(e) {
-  if (!e.target.closest('.filters__item')) {
+async function onCardClick(event) {
+  if (!event.target.closest('.filters__item')) {
     return;
   }
-  listItem.removeEventListener('click', onCardClick);
-  const item = e.target.closest('.filters__item');
+  const item = event.target.closest('.filters__item');
 
   const filter = item.children[0].innerText.toLowerCase();
   const name = item.children[1].innerText.toLowerCase();
