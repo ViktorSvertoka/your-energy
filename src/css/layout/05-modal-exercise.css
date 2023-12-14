@@ -10,6 +10,9 @@
   background: rgba(4, 4, 4, 0.4);
   backdrop-filter: blur(3px);
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -24,7 +27,6 @@
   max-height: 100%;
   padding: 40px 20px;
   border-radius: 20px;
-
   background-color: #242424;
 }
 
@@ -42,7 +44,6 @@
 }
 
 .modal-exercises__img {
-  width: 100%;
   margin-bottom: 20px;
   border-radius: 12px;
   background: linear-gradient(
@@ -58,7 +59,33 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
+  text-transform: none;
   color: #f4f4f4;
+}
+.modal-exercises__name::first-letter {
+  text-transform: uppercase;
+}
+
+.modal-exercises__rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+
+.icon-star-empty {
+  width: 18px;
+  height: 18px;
+  fill: rgba(244, 244, 244, 0.2);
+}
+
+.icon-star {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-yellow);
 }
 
 .modal-exercises__block {
@@ -103,6 +130,9 @@
   font-weight: 500;
   color: #f4f4f4;
 }
+.modal-exercises__text::first-letter {
+  text-transform: uppercase;
+}
 
 .modal-exercises__description {
   font-size: 14px;
@@ -112,7 +142,8 @@
 
 .modal-exercises__btn-container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
 }
 
 .modal-exercises__btn {
@@ -135,7 +166,9 @@
 .btn-favorites__icon {
   stroke: #242424;
   fill: #f4f4f4;
-  padding-left: 8px;
+  padding-left: 4px;
+  width: 22px;
+  height: 18px;
 }
 
 .modal-exercises__btn-rating {
