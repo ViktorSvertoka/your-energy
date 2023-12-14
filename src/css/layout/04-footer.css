@@ -44,6 +44,23 @@
   border-radius: 10px;
 }
 
+@media screen and (min-width: 1440px) {
+  .socials__link {
+    transition: all var(--transition-dur-and-func);
+  }
+
+  .socials__link:hover,
+  .socilas__link:focus {
+    background-color: var(--color-white);
+  }
+
+  .socials__link:hover .socials-icon,
+  .socials__link:focus .socials-icon {
+    stroke: var(--color-black);
+    fill: var(--color-black);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .socials__link {
     width: 44px;
@@ -53,6 +70,18 @@
 
 .socials__icon-footer {
   fill: var(--color-white);
+}
+
+@media screen and (min-width: 1440px) {
+  .socials__link:hover .socials__icon-footer {
+    transition: all var(--transition-dur-and-func);
+  }
+
+  .socials__link:hover .socials__icon-footer,
+  .socials__link:focus .socials__icon-footer {
+    stroke: var(--color-black);
+    fill: var(--color-black);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -165,6 +194,19 @@
   color: rgba(244, 244, 244, 0.6);
 }
 
+.subscribe__form-input:focus {
+  outline: none;
+  border-color: orange;
+}
+
+.subscribe__form-input:user-invalid {
+  border-color: var(--color-invalid);
+}
+
+.subscribe__form-input:user-valid {
+  border-color: var(--color-valid);
+}
+
 @media screen and (min-width: 768px) {
   .subscribe__form-input {
     height: 48px;
@@ -186,12 +228,25 @@
   font-size: 14px;
   line-height: 1.28px;
   color: var(--color-black);
+  transition: all var(--transition-dur-and-func);
+}
+
+.subscribe__form-btn:disabled {
+  background-color: var(--color-light-grey);
+}
+
+@media screen and (min-width: 1440px) {
+  .subscribe__form-btn:hover,
+  .subscribe__form-btn:focus {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-black);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .subscribe__form-btn {
     height: 48px;
-
     font-size: 16px;
     line-height: 1.5px;
   }
