@@ -9,10 +9,12 @@ async function onCardClick(event) {
     return;
   }
   const item = event.target.closest('.filters__item');
-
+  console.log(item);
   const filter = item.children[0].innerText.toLowerCase();
   const name = item.children[1].innerText.toLowerCase();
 
+  console.log(filter);
+  console.log('get');
   try {
     const data = await apiService.getExercises(filter, name);
     renderExercises(data);
@@ -22,7 +24,6 @@ async function onCardClick(event) {
 }
 
 function renderExercises(data) {
-  console.log(data[0]._id);
   listItem.innerHTML = '';
   const markup = data
     .map(({ _id, name, burnedCalories, bodyPart, target }) => {
