@@ -14,8 +14,8 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-78119179.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-4a3b1b06.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-f1e45de2.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-b2f91040.css">
   </head>
   <body>
     <header>
@@ -231,7 +231,7 @@
 <div class="footer__background">
   <div class="footer__container container" id="">
     <div class="footer__left-wrap">
-      <div class="logo" id="logo">
+      <a class="logo" id="logo" href="../index.html">
         <svg
           class="footer__logo logo"
           width="132"
@@ -240,13 +240,12 @@
         >
           <use href="../img/sprite.svg#icon-logo"></use>
         </svg>
-      </div>
+      </a>
       <ul class="socials__list">
         <li>
           <a
             class="socials__link link"
             href="https://www.facebook.com/goITclub/"
-            aria-label=""
             target="_blank"
             rel="noopener noreferrer"
             aria-label="facebook icon"
@@ -309,8 +308,11 @@
           type="email"
           name="email"
           placeholder="Email"
+          required
         />
-        <button class="subscribe__form-btn" type="submit">Send</button>
+        <button class="subscribe__form-btn" type="submit" id="subscribeBtn">
+          Send
+        </button>
       </form>
     </div>
     <div class="footer__text-outer-wrap">
