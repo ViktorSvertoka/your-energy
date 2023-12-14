@@ -14,8 +14,8 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-f1e45de2.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-b2f91040.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-dea28c0b.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-48cd8cd3.css">
   </head>
   <body>
     <header>
@@ -26,7 +26,7 @@
       <div class="logo" id="logo">
         <a href="../partials/02-hero.html">
           <svg width="132" height="24">
-            <use href="/your-energy/assets/sprite-030e182b.svg#icon-Logo"></use>
+            <use href="/your-energy/assets/sprite-64d71542.svg#icon-Logo"></use>
           </svg>
         </a>
       </div>
@@ -41,24 +41,24 @@
       <div class="burger-menu" id="burgerMenu">
         <a href="#">
           <svg class="icon icon-align-justify" width="32" height="32">
-            <use href="/your-energy/assets/sprite-030e182b.svg#icon-align-justify"></use>
+            <use href="/your-energy/assets/sprite-64d71542.svg#icon-Frame-instagram"></use>
           </svg>
         </a>
       </div>
       <ul class="social-media" id="socialMedia">
         <li>
           <a href="https://www.facebook.com/goITclub/" target="_blank">
-            <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-facebook"></use></svg>
+            <svg><use href="/your-energy/assets/sprite-64d71542.svg#icon-Frame-facebook"></use></svg>
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/goitclub/" target="_blank">
-            <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-instagram"></use></svg>
+            <svg><use href="/your-energy/assets/sprite-64d71542.svg#icon-Frame-instagram"></use></svg>
           </a>
         </li>
         <li>
           <a href="https://www.youtube.com/c/GoIT" target="_blank">
-            <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-youtube"></use></svg>
+            <svg><use href="/your-energy/assets/sprite-64d71542.svg#icon-Frame-youtube"></use></svg>
           </a>
         </li>
       </ul>
@@ -66,42 +66,59 @@
   </div>
 </section>
 
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal-content" id="modalContent">
-    <nav>
-      <div class="toggle-buttons" id="toggleButtons">
-        <button id="homeButton" class="active js-open-home">Home</button>
-        <button id="favoritesButton" class="js-open-favorites">
-          Favorites
-        </button>
-      </div>
-    </nav>
-    <ul class="social-media" id="socialMedia">
-      <li>
-        <a href="https://www.facebook.com/goITclub/" target="_blank">
-          <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-facebook"></use></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/goitclub/" target="_blank">
-          <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-instagram"></use></svg>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/c/GoIT" target="_blank">
-          <svg><use href="/your-energy/assets/sprite-030e182b.svg#icon-Frame-youtube"></use></svg>
-        </a>
-      </li>
-    </ul>
-    <button id="closeModal" class="close">&times;</button>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <div id="modalContent"></div>
   </div>
 </div>
 
     </header>
 
     <main>
-      <section>
-  <p>hi</p>
+      <section class="section">
+  <div class="container">
+    <h2 class="favorites__title">Favorites</h2>
+    <div class="favorites__general-container">
+      <div class="favorites__general-wrap">
+        <div class="favorite-quote__container">
+          <div class="favorite-svg__circle">
+            <svg class="favorite__svg" width="20" height="20">
+              <use href="../img/sprite.svg#icon-running-stick-figure"></use>
+            </svg>
+          </div>
+          <h3 class="favorite-quote__title">Quote of the day</h3>
+          <svg class="commas__svg">
+            <use href="../img/sprite.svg#icon-inverted-commas"></use>
+          </svg>
+          <div class="favorite-quote__wrapper js-quote"></div>
+        </div>
+        <ul class="favorites__card-list">
+          <li>
+            <div class="favorite__white-card">
+              <svg class="white-card__svg" width="20" height="20">
+                <use href="../img/sprite.svg#icon-fluent_food"></use>
+              </svg>
+              <h3 class="white-card__headline">10 mins</h3>
+              <p class="white-card__text">Daily norm of sports</p>
+            </div>
+          </li>
+          <li>
+            <div class="img-card__container"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="favorites__container">
+        <p class="favorites__empty">
+          It appears that you haven't added any exercises to your favorites yet.
+          To get started, you can add exercises that you like to your favorites
+          for easier access in the future.
+        </p>
+        <ul class="favorites__list"></ul>
+      </div>
+    </div>
+  </div>
 </section>
 
     </main>
