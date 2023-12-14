@@ -31,7 +31,7 @@
 }
 
 .exersices__title {
-  font-family: DMSans-Regular;
+  /* font-family: DMSans-Regular; */
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
@@ -51,7 +51,7 @@
   position: relative;
   padding: 0 0 4px;
 
-  font-family: DMSans-Regular;
+  /* font-family: DMSans-Regular; */
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -80,7 +80,6 @@
 }
 
 .exercises__btn:not(.active) {
-  font-family: DMSans-Regular;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -172,7 +171,6 @@
 }
 
 .filters__title-first {
-  font-family: DMSans-Regular;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -189,7 +187,6 @@
 }
 
 .filters__text-first {
-  font-family: DMSans-Regular;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
