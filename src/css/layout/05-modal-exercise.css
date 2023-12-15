@@ -41,7 +41,6 @@
 .modal-exercises {
   position: relative;
   z-index: 100;
-  /* overflow-y: auto; */
   overflow: auto;
   max-width: 100%;
 
@@ -141,19 +140,31 @@
   }
 }
 
-.icon-star {
-  padding: 2px;
-  width: 18px;
-  height: 18px;
-  fill: var(--color-yellow);
-}
-
-.icon-star-empty {
+/* .icon-star {
   padding: 2px;
   width: 18px;
   height: 18px;
   fill: rgba(244, 244, 244, 0.2);
+} */
+
+/* .icon-star-empty {
+  padding: 2px;
+  width: 18px;
+  height: 18px;
+  fill: rgba(244, 244, 244, 0.2);
+} */
+
+/* .icon-star:nth-child(3n + 1) {
+  fill: var(--color-yellow); 
 }
+
+.icon-star:nth-child(3n + 2) {
+  fill: var(--color-yellow); 
+}
+
+.icon-star:nth-child(3n) {
+  fill: var(--color-yellow);
+} */
 
 .modal-exercises__block {
   margin-bottom: 40px;

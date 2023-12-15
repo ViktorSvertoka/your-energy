@@ -8,13 +8,13 @@ const listItem = document.querySelector('.js-list');
 listItem.addEventListener('click', onExercisesCardClick);
 
 async function onExercisesCardClick(event) {
-  if (!event.target.closest('.filters__btn-second')) {
+  if (!event.target.closest('.card__btn')) {
     return;
   }
 
   try {
     const exerciseID = event.target
-      .closest('.filters__btn-second')
+      .closest('.card__btn')
       .getAttribute('data-id');
 
     const exerciseData = await apiService.getExercisesById(exerciseID);
@@ -43,34 +43,48 @@ function updateModal(markup) {
 }
 
 function createRating(rating) {
-  const maxRating = 5;
-  const filledStars = Math.floor(rating);
-  const remainder = rating - filledStars;
+  const starColor = '#EEA10C';
+  const emptyStarColor = '#F4F4F4';
+  const totalStars = 5;
 
-  const filledStarsHTML =
-    '<svg class="icon-star"><use href="./img/sprite.svg#icon-star"></use></svg>'.repeat(
-      filledStars
-    );
+  let stars = '';
+  for (let i = 0; i < totalStars; i++) {
+    const gradientId = `starGradient${i}`;
+    const fillPercentage =
+      i + 1 <= rating ? 100 : i < rating ? (rating % 1) * 100 : 0;
 
-  const partialStarHTML = '';
-  if (remainder > 0) {
-    const roundedRemainder = Math.round(remainder * 10) / 10;
-    partialStarHTML = `<svg class="icon-star" style="width: ${
-      roundedRemainder * 100
-    }%"><use href="./img/sprite.svg#icon-star"></use></svg>`;
+    const gradientStops = [
+      { offset: '0%', color: starColor, opacity: '1' },
+      { offset: `${fillPercentage}%`, color: starColor, opacity: '1' },
+      {
+        offset: `${fillPercentage + 1}%`,
+        color: emptyStarColor,
+        opacity: '0.20',
+      },
+    ];
+
+    // Генерація linearGradient
+    const linearGradient = `
+        <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="0%">
+          ${gradientStops
+            .map(
+              stop =>
+                `<stop offset="${stop.offset}" style="stop-color:${stop.color};stop-opacity:${stop.opacity}" />`
+            )
+            .join('')}
+        </linearGradient>
+      `;
+
+    const fill = `url(#${gradientId})`;
+
+    stars += `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">${linearGradient}<path d="M6.04894 0.927052C6.3483 0.0057416 7.6517 0.00574088 7.95106 0.927052L8.79611 3.52786C8.92999 3.93989 9.31394 4.21885 9.74717 4.21885H12.4818C13.4505 4.21885 13.8533 5.45846 13.0696 6.02786L10.8572 7.63525C10.5067 7.8899 10.3601 8.34127 10.494 8.75329L11.339 11.3541C11.6384 12.2754 10.5839 13.0415 9.80017 12.4721L7.58779 10.8647C7.2373 10.6101 6.7627 10.6101 6.41222 10.8647L4.19983 12.4721C3.41612 13.0415 2.36164 12.2754 2.66099 11.3541L3.50604 8.75329C3.63992 8.34127 3.49326 7.8899 3.14277 7.63525L0.930391 6.02787C0.146677 5.45846 0.549452 4.21885 1.51818 4.21885H4.25283C4.68606 4.21885 5.07001 3.93989 5.20389 3.52786L6.04894 0.927052Z" fill="${fill}" fill-opacity="1"/></svg>`;
   }
-
-  const emptyStarsHTML =
-    '<svg class="icon-star-empty"><use href="./img/sprite.svg#icon-star"></use></svg>'.repeat(
-      maxRating - filledStars
-    );
 
   const ratingText = Number.isInteger(rating)
     ? `${rating}.0`
-    : `${rating}.toFixed(1)`;
-  const starsHTML = `${filledStarsHTML}${partialStarHTML}${emptyStarsHTML}`;
+    : rating.toFixed(1);
 
-  const ratingWithStars = `${ratingText} ${starsHTML}`;
+  const ratingWithStars = `${ratingText} ${stars}`;
 
   return ratingWithStars;
 }
