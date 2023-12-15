@@ -14,8 +14,8 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-ff1cab4b.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-b9614346.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-7c59e780.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-b175615f.css">
   </head>
   <body>
     <header>
@@ -148,6 +148,40 @@
           >
         </li>
       </ul>
+    </div>
+    <div class="hero__bmi-wrap">
+      <img
+        class="hero__bmi-pic"
+        src="/your-energy/assets/hero-image-bmi-fabe04ed.jpg"
+        srcset="/your-energy/assets/hero-image-bmi@2x-d7bdf692.jpg 2x"
+        alt="young woman working out alone outdoors"
+      />
+      <div class="hero__bmi">
+        <h2 class="hero__bmi-title">Body Mass Index (BMI) Calculator</h2>
+        <label class="hero__label">
+          Your Height (cm):
+          <input
+            type="number"
+            class="hero__input"
+            id="height"
+            value="180"
+            placeholder="Enter your height in cm"
+        /></label>
+        <label class="hero__label"
+          >Your Weight (kg):
+          <input
+            type="number"
+            class="hero__input"
+            id="weight"
+            value="80"
+            placeholder="Enter your weight in kg"
+        /></label>
+        <button class="hero__btn" id="btn">Compute BMI</button>
+        <input disabled type="text" class="hero__input" id="bmi-result" />
+        <h4 class="hero__info-text">
+          Weight Condition: <span id="weight-condition"></span>
+        </h4>
+      </div>
     </div>
   </div>
 </section>
