@@ -13,8 +13,24 @@ export default class APIService {
   async getExercises(params1, params2) {
     try {
       this.page += 1;
+
+      console.log(
+        `${this.baseURL}exercises?${params1}=${params2}&page=1&limit=10`
+      );
       const response = await axios.get(
         `${this.baseURL}exercises?${params1}=${params2}&page=1&limit=10`
+      );
+      return response.data.results;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async getSearch(params1, params2, params3) {
+    try {
+      this.page += 1;
+      const response = await axios.get(
+        `${this.baseURL}exercises?${params1}=${params2}&keyword=${params3}&page=1&limit=10`
       );
 
       return response.data.results;

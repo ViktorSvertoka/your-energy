@@ -1,3 +1,44 @@
-<section>
-  <p>hi</p>
+<section class="section">
+  <div class="container">
+    <h2 class="favorites__title">Favorites</h2>
+    <div class="favorites__general-container">
+      <div class="favorites__general-wrap">
+        <div class="favorite-quote__container">
+          <div class="favorite-svg__circle">
+            <svg class="favorite__svg" width="20" height="20">
+              <use href="../img/sprite.svg#icon-running-stick-figure"></use>
+            </svg>
+          </div>
+          <h3 class="favorite-quote__title">Quote of the day</h3>
+          <svg class="commas__svg">
+            <use href="../img/sprite.svg#icon-inverted-commas"></use>
+          </svg>
+          <div class="favorite-quote__wrapper js-quote"></div>
+        </div>
+        <ul class="favorites__card-list">
+          <li>
+            <div class="favorite__white-card">
+              <svg class="white-card__svg" width="20" height="20">
+                <use href="../img/sprite.svg#icon-fluent_food"></use>
+              </svg>
+              <h3 class="white-card__headline">10 mins</h3>
+              <p class="white-card__text">Daily norm of sports</p>
+            </div>
+          </li>
+          <li>
+            <div class="img-card__container"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="favorites__container">
+        <p class="favorites__empty">
+          It appears that you haven't added any exercises to your favorites yet.
+          To get started, you can add exercises that you like to your favorites
+          for easier access in the future.
+        </p>
+        <ul class="favorites__list"></ul>
+      </div>
+    </div>
+  </div>
 </section>

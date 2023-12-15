@@ -6,7 +6,7 @@ import { Messages } from './13-messages.js';
 const form = document.getElementById('subscribeForm');
 const emailInput = form.querySelector('input[name="email"]');
 const subscribeBtn = document.getElementById('subscribeBtn');
-console.dir(subscribeBtn);
+// console.dir(subscribeBtn);
 
 emailInput.addEventListener('input', handleEmailValidation);
 form.addEventListener('submit', subscribe);
