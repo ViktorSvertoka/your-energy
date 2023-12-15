@@ -14,8 +14,8 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-8774b839.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-cb4f05b4.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-ff1cab4b.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-b9614346.css">
   </head>
   <body>
     <header>
@@ -156,38 +156,6 @@
 <section class="section">
   <div class="exersices__container container">
     <h2 class="exersices__title">Exercises</h2>
-
-    <form class="search-container">
-      <input
-        type="text"
-        id="search-input"
-        name="searchQuery"
-        placeholder="Search"
-      />
-      <a href="#" id="search-button"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          fill="none"
-        >
-          <path
-            d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z"
-            stroke="#242424"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M15.7498 15.75L12.4873 12.4875"
-            stroke="#242424"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          /></svg
-      ></a>
-    </form>
     <ul class="exersices__list">
       <li>
         <button class="exercises__btn btnFilters active" type="button">
@@ -208,9 +176,47 @@
   </div>
 
   <div class="quote-filters__container container">
-    <div class="quote__container">
-      <h3 class="quote__title">Quote of the day</h3>
-      <div class="quote__wrapper js-quote"></div>
+    <div class="aside__container">
+      <ul class="aside__container-list">
+        <li>
+          <div class="quote__container">
+            <div class="aside-svg__circle">
+              <svg class="aside__svg" width="20" height="20">
+                <use href="../img/sprite.svg#icon-running-stick-figure"></use>
+              </svg>
+            </div>
+            <h3 class="quote__title">Quote of the day</h3>
+            <svg class="aside__commas-svg">
+              <use href="../img/sprite.svg#icon-inverted-commas"></use>
+            </svg>
+            <div class="aside-quote__wrapper js-quote"></div>
+          </div>
+        </li>
+        <li>
+          <div class="aside__img"></div>
+        </li>
+        <li>
+          <div class="aside__white-card">
+            <div class="white-card-svg__wrapper">
+              <svg class="aside__white-card-svg" width="20" height="20">
+                <use href="../img/sprite.svg#icon-fluent_food"></use>
+              </svg>
+            </div>
+
+            <h3 class="aside__white-card-title">110 min</h3>
+            <h4 class="aside__white-card-subtitle">Daily norm of sports</h4>
+            <p class="aside__white-card-text">
+              The World Health Organization recommends at least 150 minutes of
+              moderate-intensity aerobic physical activity throughout the week
+              for adults aged 18-64. However, what happens if we adjust that
+              number to 110 minutes every day? While it might seem like a high
+              number to hit, dedicating 110 minutes daily to sporting activities
+              may offer unparalleled benefits to physical health, mental
+              well-being, and overall quality of life.
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <div class="filters__container">
