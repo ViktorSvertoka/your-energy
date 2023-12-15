@@ -1,6 +1,5 @@
 /* exercises styles */
 
-
 .filters__list {
   width: 375px;
 }
@@ -54,7 +53,7 @@
   .filters__item-card {
     width: 442px;
   }
-
+}
 .exersices__container {
   display: flex;
   flex-direction: column;
@@ -204,7 +203,6 @@
 .filters__item {
   width: 100%;
   position: relative;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -229,7 +227,6 @@
 }
 
 .filters__title-first {
-
   color: var(--color-white);
   text-align: center;
   font-family: DM Sans;
@@ -248,7 +245,6 @@
     font-size: 24px;
     line-height: 24px;
   }
-
 }
 
 .filters__text-first {
@@ -388,7 +384,6 @@
 .card__text-info span {
   padding-right: 2px;
   color: rgba(36, 36, 36, 0.4);
-
 }
 
 .aside__container {
@@ -711,5 +706,4 @@
   .aside__white-card-text {
     -webkit-line-clamp: 9;
   }
-
 }
