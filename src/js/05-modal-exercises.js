@@ -161,7 +161,7 @@ function createMarkup({
         </div>
 
       <div class="modal-exercises__btn-container">
-        <button class="modal-exercises__btn-favorites modal-exercises__btn">
+        <button class="modal-exercises__btn-favorites modal-exercises__btn" data-id="${_id}">
             Add to favorites
             <svg class="btn-favorites__icon">
               <use href="./img/sprite.svg#icon-favorites"></use>

@@ -10,7 +10,6 @@ async function onCardClick(event) {
     return;
   }
   const item = event.target.closest('.filters__item');
-  console.log(item.lastElementChild);
 
   let filter = item.lastElementChild.children[0].innerText
     .toLowerCase()
