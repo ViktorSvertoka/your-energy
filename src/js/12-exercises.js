@@ -10,12 +10,19 @@ async function onCardClick(event) {
     return;
   }
   const item = event.target.closest('.filters__item');
-  console.log(item);
-  const filter = item.children[0].innerText.toLowerCase();
-  const name = item.children[1].innerText.toLowerCase();
+  console.log(item.lastElementChild);
 
-  console.log(filter);
-  console.log('get');
+  let filter = item.lastElementChild.children[0].innerText
+    .toLowerCase()
+    .replace(/\s/g, '');
+  const name = item.lastElementChild.children[1].innerText
+    .toLowerCase()
+    .replace(/\s/g, '%20');
+
+  if (filter === 'bodyparts') {
+    filter = 'bodypart';
+  }
+
   try {
     const data = await apiService.getExercises(filter, name);
     renderExercises(data);
