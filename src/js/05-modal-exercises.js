@@ -99,55 +99,64 @@ function createMarkup({
   const ratingStarsHTML = createRating(rating);
   return `
   <div class="modal-exercises__container" data-id="${_id}">
-  <button class="modal-exercises__btn-close"><svg width="24" height="24">
-    <use href="./img/sprite.svg#icon-menu-mobile-close"></use>
-  </svg>
-  </button>
-  <img
+    <button class="modal-exercises__btn-close">
+      <svg width="24" height="24">
+        <use href="./img/sprite.svg#icon-menu-mobile-close"></use>
+      </svg>
+    </button>
+
+    <img
     class="modal-exercises__img"
     ${getExerciseGif}
     alt="Exercise video"
     loading="lazy"
-  />
-  <div class="modal-exercises__card">
-    <h2 class="modal-exercises__name">${name}</h2>
-    <div class="modal-exercises__rating">${ratingStarsHTML}</div>
-    <div class="modal-exercises__block">
-      <ul class="modal-exercises__list">
-        <li class="modal-exercises__item">
-          <h3 class="modal-exercises__subtitle">Target</h3>
-          <p class="modal-exercises__text">${target}</p>
-        </li>
-        <li class="modal-exercises__item">
-          <h3 class="modal-exercises__subtitle">Body Part</h3>
-          <p class="modal-exercises__text">${bodyPart}</p>
-        </li>
-        <li class="modal-exercises__item">
-          <h3 class="modal-exercises__subtitle">Equipment</h3>
-          <p class="modal-exercises__text">${equipment}</p>
-        </li>
-        <li class="modal-exercises__item">
-          <h3 class="modal-exercises__subtitle">Popular</h3>
-          <p class="modal-exercises__text">${popularity}</p>
-        </li>
-        <li class="modal-exercises__item">
-          <h3 class="modal-exercises__subtitle">Burned calories</h3>
-          <p class="modal-exercises__text">${burnedCalories}/${time}</p>
-        </li>
-      </ul>
-      <p class="modal-exercises__description">${description}</p>
-    </div>
-    <div class="modal-exercises__btn-container">
+    />
+
+    <div class="modal-exercises__card">
+      <h2 class="modal-exercises__name">${name}</h2>
+      <div class="modal-exercises__rating">${ratingStarsHTML}</div>
+
+        <div class="modal-exercises__block">
+          <ul class="modal-exercises__list">
+            <li class="modal-exercises__item">
+              <h3 class="modal-exercises__subtitle">Target</h3>
+              <p class="modal-exercises__text">${target}</p>
+            </li>
+
+            <li class="modal-exercises__item">
+              <h3 class="modal-exercises__subtitle">Body Part</h3>
+              <p class="modal-exercises__text">${bodyPart}</p>
+            </li>
+
+            <li class="modal-exercises__item">
+              <h3 class="modal-exercises__subtitle">Equipment</h3>
+              <p class="modal-exercises__text">${equipment}</p>
+            </li>
+
+            <li class="modal-exercises__item">
+              <h3 class="modal-exercises__subtitle">Popular</h3>
+              <p class="modal-exercises__text">${popularity}</p>
+            </li>
+            
+            <li class="modal-exercises__item">
+              <h3 class="modal-exercises__subtitle">Burned Calories</h3>
+              <p class="modal-exercises__text">${burnedCalories}/${time}</p>
+            </li>
+          </ul>
+          <p class="modal-exercises__description">${description}</p>
+        </div>
+
+      <div class="modal-exercises__btn-container">
         <button class="modal-exercises__btn-favorites modal-exercises__btn">
             Add to favorites
             <svg class="btn-favorites__icon">
               <use href="./img/sprite.svg#icon-favorites"></use>
             </svg>
           </button>
-          <button class="modal-exercises__btn-rating modal-exercises__btn">Give a rating</button>
+        <button class="modal-exercises__btn-rating modal-exercises__btn">Give a rating</button>
+      </div>
     </div>
   </div>
-</div>
 `;
 }
 
