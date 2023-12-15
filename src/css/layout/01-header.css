@@ -1,49 +1,5 @@
 /* header styles */
-.section {
-  padding-bottom: 40px;
-}
 
-@media screen and (min-width: 768px) {
-  .section {
-    padding-bottom: 64px;
-  }
-}
-
-.header {
-  background-color: #f4f4f4;
-  color: #fff;
-  padding: 32px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  cursor: pointer;
-  align-self: center;
-}
-
-.social-media {
-  list-style: none;
-  display: flex;
-  gap: 12px;
-  color: #242424;
-}
-@media screen and (max-width: 767px) {
-  .social-media {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .social-media svg {
-    width: 44px;
-    height: 44px;
-    fill: #242424;
-    cursor: pointer;
-    gap: 12px;
-  }
-}
 .toggle-buttons {
   width: 233px;
   height: 52px;
@@ -57,62 +13,212 @@
   gap: 18px;
 }
 
-@media screen and (min-width: 768px) {
-  .toggle-buttons {
-    width: 265px;
-    height: 52px;
+.toggle-buttons a {
+  width: 70px;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-buttons a {
+  background-color: #f4f4f4;
+  color: #242424;
+}
+
+.toggle-buttons a.active {
+  background-color: #242424;
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 320px;
+  padding: 20px 20px 80px 20px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+}
+
+@media screen and (min-width: 375px) {
+  .header-container {
+    width: 375px;
   }
 }
 
-.toggle-buttons button {
-  width: 74px;
-  height: 36px;
-  background-color: #f4f4f4;
-  border-radius: 30px;
-  font-family: DM Sans, sans-serif;
-  font-size: 16px;
-  color: #242424;
-  border: none;
-  cursor: pointer;
+@media screen and (min-width: 768px) {
+  .header-container {
+    width: 768px;
+    padding: 24px 32px 100px 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header-container {
+    padding: 28px 32px 96px 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 @media screen and (max-width: 767px) {
-  .toggle-buttons {
+  .header__socials-list {
     display: none;
   }
-}
-.toggle-buttons button.active {
-  background-color: #242424;
-  color: #f4f4f4;
-}
-.icon {
-  color: #242424;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  z-index: 1000;
-  display: block;
 }
 @media screen and (min-width: 768px) {
-  .icon {
+  .header__socials-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+}
+
+.header__socials-item {
+  width: 44px;
+  height: 44px;
+  fill: #f4f4f4;
+}
+
+.header__socials-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-open__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-open__button {
     display: none;
   }
 }
-.modal-overlay {
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 64vw;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  padding: 20px;
+  background-color: #242424;
+  z-index: 999;
+  transform: translateX(100%);
 }
 
-.modal-content {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
+@media screen and (min-width: 768px) {
+  .menu-container {
+    width: 100vw;
+  }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-close__button {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  outline: transparent;
+  background-color: transparent;
+  border: none;
+}
+
+.menu__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-align: center;
+  margin-top: 280px;
+}
+
+.menu__nav-link {
+  position: relative;
+  color: #f4f4f4;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.15; /* 150% */
+}
+
+.menu__socials-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+}
+
+.menu__socials-item {
+  width: 44px;
+  height: 44px;
+  fill: #f4f4f4;
+}
+
+.menu__socials-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  min-width: 320px;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(18, 20, 23, 0.4);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }

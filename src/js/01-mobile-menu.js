@@ -1,53 +1,59 @@
-const burgerMenu = document.getElementById('burgerMenu');
-const modalOverlay = document.getElementById('modalOverlay');
-const closeModalButton = document.getElementById('closeModal');
-const openHomeButton = document.getElementById('homeButton');
-const openFavoritesButton = document.getElementById('favoritesButton');
+document.addEventListener('DOMContentLoaded', function () {
+  const homeButton = document.getElementById('homeButton');
+  const favoritesButton = document.getElementById('favoritesButton');
 
-burgerMenu.addEventListener('click', toggleMobileMenu);
+  homeButton.addEventListener('click', () => {
+    console.log('Home button clicked');
+    homeButton.classList.add('active');
+    favoritesButton.classList.remove('active');
+  });
 
-closeModalButton.addEventListener('click', closeModal);
-
-openHomeButton.addEventListener('click', () => {
-  toggleButtonsFunction();
-  redirectToHome();
+  favoritesButton.addEventListener('click', () => {
+    console.log('Favorites button clicked');
+    favoritesButton.classList.add('active');
+    homeButton.classList.remove('active');
+  });
 });
 
-openFavoritesButton.addEventListener('click', () => {
-  toggleButtonsFunction();
-  redirectToFavorites();
+const openMenuButton = document.querySelector('.js-open-menu');
+const closeMenuButton = document.querySelector('.js-close-menu');
+const mobileMenu = document.querySelector('#mobile-menu');
+const backdrop = document.querySelector('[data-menu-backdrop]');
+const menuNavLinks = document.querySelectorAll('.menu__nav-link');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('is-open');
+  backdrop.classList.remove('is-hidden');
+  document.body.classList.add('no-scroll');
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('is-open');
+  backdrop.classList.add('is-hidden');
+  document.body.classList.remove('no-scroll');
+}
+
+openMenuButton.addEventListener('click', () => {
+  openMobileMenu();
 });
 
-function toggleMobileMenu() {
-  if (modalOverlay.style.display === 'block') {
-    closeModal();
-  } else {
-    openModal();
-  }
-}
+closeMenuButton.addEventListener('click', () => {
+  closeMobileMenu();
+});
 
-function openModal() {
-  modalOverlay.style.display = 'block';
-}
+backdrop.addEventListener('click', () => {
+  closeMobileMenu();
+});
 
-function closeModal() {
-  modalOverlay.style.display = 'none';
-}
+menuNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const targetId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
 
-function toggleButtonsFunction() {
-  if (!openHomeButton.classList.contains('active')) {
-    openHomeButton.classList.add('active');
-    openFavoritesButton.classList.remove('active');
-  } else {
-    openHomeButton.classList.remove('active');
-    openFavoritesButton.classList.add('active');
-  }
-}
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
 
-function redirectToHome() {
-  window.location.href = '../partials/10-favorites.html';
-}
-
-function redirectToFavorites() {
-  window.location.href = '../partials/10-favorites.html';
-}
+      closeMobileMenu();
+    }
+  });
+});
