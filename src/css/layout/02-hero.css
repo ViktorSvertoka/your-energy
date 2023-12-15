@@ -2,8 +2,6 @@
 
 /* Base */
 
-
-
 .section {
     padding-bottom: 40px;
 }
@@ -185,7 +183,7 @@
     font-size: 14px;
     line-height: 1.28;
     padding: 4px 12px;
-    letter-spacing: -0.1px;
+    letter-spacing: -0.2px;
     border-radius: 30px;
     border: 1px solid var(--color-black);
 }
@@ -237,15 +235,8 @@
     flex-direction: column;
 }
 
-
-@media screen and (min-width: 1440px) {
-    .hero__bmi {
-        padding-left: 20px;
-    }
-}
-
 .hero__bmi-title {
-    font-size: 44px;
+    font-size: 40px;
     color: var(--color-black);
     font-weight: 400;
     letter-spacing: -0.88px;
@@ -253,10 +244,8 @@
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 1440px) {
-    .hero__bmi-title {
-        font-size: 40px;
-    }
+.hero__bmi-title-part {
+    font-style: italic;
 }
 
 .hero__label {
@@ -274,38 +263,10 @@
     align-items: center;
     gap: 10px;
     border-radius: 30px;
-    border: 1px solid #242424;
+    border: 1px solid var(--color-black);
     background-color: var(--color-white);
     font-size: 18px;
     margin: 10px;
-}
-
-@media screen and (min-width: 768px) {
-    .hero__input {
-        display: inline-flex;
-        padding: 12px 14px;
-        align-items: center;
-        gap: 10px;
-        border-radius: 30px;
-        border: 1px solid #242424;
-        background-color: var(--color-white);
-        font-size: 18px;
-        margin: 10px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .hero__input {
-        display: inline-flex;
-        padding: 12px 14px;
-        align-items: center;
-        gap: 10px;
-        border-radius: 30px;
-        border: 1px solid #242424;
-        background-color: var(--color-white);
-        font-size: 18px;
-        margin: 10px;
-    }
 }
 
 .hero__btn {
@@ -328,9 +289,9 @@
 }
 
 .hero__info-text {
+    padding-top: 10px;
     font-size: 20px;
     font-weight: 500;
-
 }
 
 .hero__bmi-pic {
