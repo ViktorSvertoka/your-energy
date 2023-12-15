@@ -2,7 +2,7 @@
 <div class="footer__background">
   <div class="footer__container container" id="">
     <div class="footer__left-wrap">
-      <div class="logo" id="logo">
+      <a class="logo" id="logo" href="../index.html">
         <svg
           class="footer__logo logo"
           width="132"
@@ -11,13 +11,12 @@
         >
           <use href="../img/sprite.svg#icon-logo"></use>
         </svg>
-      </div>
+      </a>
       <ul class="socials__list">
         <li>
           <a
             class="socials__link link"
             href="https://www.facebook.com/goITclub/"
-            aria-label=""
             target="_blank"
             rel="noopener noreferrer"
             aria-label="facebook icon"
@@ -71,17 +70,18 @@
       <h2 class="footer__title">
         Transforming your <span class="accent-text">body</span> shape with us
       </h2>
-      <form class="subscribe__form">
+      <form class="subscribe__form" id="subscribeForm">
         <h3 class="subscribe__form-title">
           Subscribe and learn about new exercises!
         </h3>
         <input
           class="subscribe__form-input"
           type="email"
-          name="user-email"
+          name="email"
           placeholder="Email"
+          required
         />
-        <button class="subscribe__form-btn" type="submit" id="submitButton">
+        <button class="subscribe__form-btn" type="submit" id="subscribeBtn">
           Send
         </button>
       </form>

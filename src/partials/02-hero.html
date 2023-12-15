@@ -3,7 +3,7 @@
   <div class="container">
     <div class="hero">
       <div class="hero__icon-title">
-        <svg class="hero__icon" width="38" height="38">
+        <svg id="mySVG" class="hero__icon" width="38" height="38">
           <use href="./img/sprite.svg#icon-sun"></use>
         </svg>
         <h1 class="hero__title">
@@ -31,14 +31,14 @@
           "
         />
         <source
-          media="(min-width: 768px) and (max-width: 1279px)"
+          media="(min-width: 768px) and (max-width: 1439px)"
           srcset="
             ./img/hero-image-tablet.jpg    1x,
             ./img/hero-image-tablet@2x.jpg 2x
           "
         />
         <source
-          media="(min-width: 1280px)"
+          media="(min-width: 1440px)"
           srcset="
             ./img/hero-image-desktop.jpg    1x,
             ./img/hero-image-desktop@2x.jpg 2x
@@ -50,11 +50,69 @@
         />
       </picture>
       <ul class="hero__hashtags">
-        <li class="hero__hashtag">#Sport</li>
-        <li class="hero__hashtag">#Healthy</li>
-        <li class="hero__hashtag">#Workout</li>
-        <li class="hero__hashtag">#Diet</li>
+        <li class="hero__hashtag">
+          <a
+            class="hero__hashtag-text"
+            href="https://www.instagram.com/explore/tags/sport/"
+            >#Sport</a
+          >
+        </li>
+        <li class="hero__hashtag">
+          <a
+            class="hero__hashtag-text"
+            href="https://www.instagram.com/explore/tags/healthy/"
+            >#Healthy</a
+          >
+        </li>
+        <li class="hero__hashtag">
+          <a
+            class="hero__hashtag-text"
+            href="https://www.instagram.com/explore/tags/workout/"
+            >#Workout</a
+          >
+        </li>
+        <li class="hero__hashtag">
+          <a
+            class="hero__hashtag-text"
+            href="https://www.instagram.com/explore/tags/diet/"
+            >#Diet</a
+          >
+        </li>
       </ul>
+    </div>
+    <div class="hero__bmi-wrap">
+      <img
+        class="hero__bmi-pic"
+        src="./img/hero-image-bmi.jpg"
+        srcset="./img/hero-image-bmi@2x.jpg 2x"
+        alt="young woman working out alone outdoors"
+      />
+      <div class="hero__bmi">
+        <h2 class="hero__bmi-title">Body Mass Index (BMI) Calculator</h2>
+        <label class="hero__label">
+          Your Height (cm):
+          <input
+            type="number"
+            class="hero__input"
+            id="height"
+            value="180"
+            placeholder="Enter your height in cm"
+        /></label>
+        <label class="hero__label"
+          >Your Weight (kg):
+          <input
+            type="number"
+            class="hero__input"
+            id="weight"
+            value="80"
+            placeholder="Enter your weight in kg"
+        /></label>
+        <button class="hero__btn" id="btn">Compute BMI</button>
+        <input disabled type="text" class="hero__input" id="bmi-result" />
+        <h4 class="hero__info-text">
+          Weight Condition: <span id="weight-condition"></span>
+        </h4>
+      </div>
     </div>
   </div>
 </section>

@@ -4,7 +4,9 @@
     <h2 class="exersices__title">Exercises</h2>
     <ul class="exersices__list">
       <li>
-        <button class="exercises__btn btnFilters" type="button">Muscles</button>
+        <button class="exercises__btn btnFilters active" type="button">
+          Muscles
+        </button>
       </li>
       <li>
         <button class="exercises__btn btnFilters" type="button">
@@ -19,12 +21,65 @@
     </ul>
   </div>
 
-  <div class="quote__container container">
-    <h3 class="quote__title">Quote of the day</h3>
-    <div class="quote__wrapper js-quote"></div>
+  <div class="quote-filters__container container">
+    <div class="aside__container">
+      <ul class="aside__container-list">
+        <li>
+          <div class="quote__container">
+            <div class="aside-svg__circle">
+              <svg class="aside__svg" width="20" height="20">
+                <use href="../img/sprite.svg#icon-running-stick-figure"></use>
+              </svg>
+            </div>
+            <h3 class="quote__title">Quote of the day</h3>
+            <svg class="aside__commas-svg">
+              <use href="../img/sprite.svg#icon-inverted-commas"></use>
+            </svg>
+            <div class="aside-quote__wrapper js-quote"></div>
+          </div>
+        </li>
+        <li>
+          <div class="aside__img"></div>
+        </li>
+        <li>
+          <div class="aside__white-card">
+            <div class="white-card-svg__wrapper">
+              <svg class="aside__white-card-svg" width="20" height="20">
+                <use href="../img/sprite.svg#icon-fluent_food"></use>
+              </svg>
+            </div>
+
+            <h3 class="aside__white-card-title">110 min</h3>
+            <h4 class="aside__white-card-subtitle">Daily norm of sports</h4>
+            <p class="aside__white-card-text">
+              The World Health Organization recommends at least 150 minutes of
+              moderate-intensity aerobic physical activity throughout the week
+              for adults aged 18-64. However, what happens if we adjust that
+              number to 110 minutes every day? While it might seem like a high
+              number to hit, dedicating 110 minutes daily to sporting activities
+              may offer unparalleled benefits to physical health, mental
+              well-being, and overall quality of life.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="filters__container">
+      <ul class="filters__list js-list"></ul>
+    </div>
   </div>
 
-  <div class="filters__container container">
-    <ul class="filters__list js-list"></ul>
-  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.exercises__btn');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          buttons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+        });
+      });
+    });
+  </script>
 </section>
