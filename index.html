@@ -14,8 +14,10 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/main-e64a9a51.js"></script>
-    <link rel="stylesheet" href="/your-energy/assets/main-229c580a.css">
+    <script type="module" crossorigin src="/your-energy/assets/index-a2b47bc6.js"></script>
+    <link rel="modulepreload" crossorigin href="/your-energy/assets/sprite-c729b006.js">
+    <link rel="stylesheet" href="/your-energy/assets/sprite-11356b3a.css">
+    <link rel="stylesheet" href="/your-energy/assets/index-e5212ee8.css">
   </head>
   <body>
     <header>
@@ -357,19 +359,6 @@
       <ul class="filters__list js-list"></ul>
     </div>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.exercises__btn');
-
-      buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          buttons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-        });
-      });
-    });
-  </script>
 </section>
 
     </main>
