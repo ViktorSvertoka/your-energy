@@ -114,7 +114,7 @@ function createMarkup({
   <div class="modal-exercises__container" data-id="${_id}">
     <button class="modal-exercises__btn-close">
       <svg width="24" height="24">
-        <use href="/img/sprite.svg#icon-menu-mobile-close"></use>
+        <use href="../img/sprite.svg#icon-menu-mobile-close"></use>
       </svg>
     </button>
 
@@ -163,7 +163,7 @@ function createMarkup({
         <button class="modal-exercises__btn-favorites modal-exercises__btn" data-id="${_id}">
             Add to favorites
             <svg class="btn-favorites__icon">
-              <use href="/img/sprite.svg#icon-favorites"></use>
+              <use href="../img/sprite.svg#icon-favorites"></use>
             </svg>
           </button>
         <button class="modal-exercises__btn-rating modal-exercises__btn">Give a rating</button>
