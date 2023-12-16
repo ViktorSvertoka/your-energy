@@ -1,4 +1,7 @@
 import APIService from './00-api';
+import icons from '../img/sprite.svg';
+import image from '../img/modal-exercise-image.jpg';
+import imageRetina from '../img/modal-exercise-image@2x.jpg';
 const apiService = new APIService();
 
 const modalExercises = document.querySelector('.modal-exercises');
@@ -104,8 +107,8 @@ function createMarkup({
   const getExerciseGif = getGif(gifUrl);
   function getGif(gifUrl) {
     if (gifUrl === null || !gifUrl) {
-      return `srcset = './img/modal-exercise-image.jpg 1x,./img/modal-exercise-image@2x.jpg 2x'
-      src = './img/modal-exercise-image.jpg'`;
+      return `srcset = '${image} 1x,${imageRetina} 2x'
+      src = '${image}'`;
     }
     return `src="${gifUrl}"`;
   }
@@ -114,7 +117,7 @@ function createMarkup({
   <div class="modal-exercises__container" data-id="${_id}">
     <button class="modal-exercises__btn-close">
       <svg width="24" height="24">
-        <use href="../img/sprite.svg#icon-menu-mobile-close"></use>
+        <use href="${icons}#icon-menu-mobile-close"></use>
       </svg>
     </button>
 
@@ -163,7 +166,7 @@ function createMarkup({
         <button class="modal-exercises__btn-favorites modal-exercises__btn" data-id="${_id}">
             Add to favorites
             <svg class="btn-favorites__icon">
-              <use href="../img/sprite.svg#icon-favorites"></use>
+              <use href="${icons}#icon-favorites"></use>
             </svg>
           </button>
         <button class="modal-exercises__btn-rating modal-exercises__btn">Give a rating</button>
