@@ -1,4 +1,4 @@
-import{i as n}from"./sprite-33db138b.js";const d=document.querySelector(".favorites__list"),l=document.getElementById("favoritesButton");l.addEventListener("click",_());function _(){const t=JSON.parse(localStorage.getItem("exerciseData"));if(t!==null){d.innerHTML="";const e=t.map(({_id:a,name:s,burnedCalories:r,bodyPart:c,target:i})=>`
+import{i as n}from"./sprite-578f308f.js";const d=document.querySelector(".favorites__list"),l=document.getElementById("favoritesButton");l.addEventListener("click",_());function _(){const t=JSON.parse(localStorage.getItem("exerciseData"));if(t!==null){d.innerHTML="";const e=t.map(({_id:a,name:s,burnedCalories:r,bodyPart:c,target:i})=>`
       <li class="fav-filters__item-card">
         <div class="fav-card__wrap">
           <div class="fav-card__block-btn">
