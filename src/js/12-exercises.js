@@ -1,27 +1,23 @@
+
 import APIService from './00-api';
 import icons from '../img/sprite.svg';
 const apiService = new APIService();
 const listItem = document.querySelector('.js-list');
-
 listItem.addEventListener('click', onCardClick);
-
 async function onCardClick(event) {
   if (!event.target.closest('.filters__item')) {
     return;
   }
   const item = event.target.closest('.filters__item');
-
   let filter = item.lastElementChild.children[0].innerText
     .toLowerCase()
     .replace(/\s/g, '');
   const name = item.lastElementChild.children[1].innerText
     .toLowerCase()
     .replace(/\s/g, '%20');
-
   if (filter === 'bodyparts') {
     filter = 'bodypart';
   }
-
   try {
     const data = await apiService.getExercises(filter, name);
     renderExercises(data);
@@ -29,11 +25,9 @@ async function onCardClick(event) {
     console.log(error);
   }
 }
-
 function renderExercises(data) {
   listItem.innerHTML = '';
   const markup = data
-
     .map(({ _id, rating, name, burnedCalories, bodyPart, target }) => {
       return `
       <li class="filters__item-card">
@@ -53,9 +47,11 @@ function renderExercises(data) {
               </button>
             </div>
               <div class="card__wrap-title">
+              <div class="card__title-svg-btn">
                 <svg class="card__title-svg" width="24" height="24">
                   <use href="${icons}#icon-running-stick-figure"></use>
                 </svg>
+                </div>
                 <h2 class="card__title">${name}</h2>
               </div>
               <div class="card__block-info">
@@ -67,17 +63,5 @@ function renderExercises(data) {
       </li>`;
     })
     .join('');
-
   listItem.insertAdjacentHTML('beforeend', markup);
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.exercises__btn');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      buttons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-    });
-  });
-});
