@@ -103,7 +103,7 @@
 
 .team__item {
   border-radius: 5px;
-  background-color: var(--color-grey);
+  background-color: var(--color-white);
   color: var(--color-white);
   position: relative;
   border-radius: 10px;
@@ -131,6 +131,7 @@
 
 .team__box {
   /* Replace with your font properties */
+  background-color: var(--color-white);
   font-weight: 500;
   font-size: 16px;
   padding: 10px;
@@ -167,7 +168,7 @@
 
 .team__link-linkedin--active:hover,
 .team__link-linkedin--active:focus {
-  background-color: var(--color-green);
+  background-color: #EEA10C;
   fill: var(--color-white);
 }
 
