@@ -9,6 +9,7 @@ const overlay = document.querySelector('.overlay');
 const listItem = document.querySelector('.js-list');
 
 listItem.addEventListener('click', onExercisesCardClick);
+console.log(listItem);
 
 async function onExercisesCardClick(event) {
   if (!event.target.closest('.card__btn')) {
@@ -188,6 +189,7 @@ overlay.addEventListener('click', function (event) {
     closeModalExercises();
   }
 });
+
 window.addEventListener('keydown', function (event) {
   if (event.key === 'Escape' && !modalExercises.classList.contains('hidden')) {
     closeModalExercises();

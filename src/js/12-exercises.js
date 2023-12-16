@@ -70,3 +70,14 @@ function renderExercises(data) {
 
   listItem.insertAdjacentHTML('beforeend', markup);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.exercises__btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+});
