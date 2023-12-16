@@ -98,6 +98,7 @@
 
 @media screen and (min-width: 768px) {
   .modal-exercises__img {
+    width: 270px;
     height: 259px;
     margin-bottom: 0;
   }
@@ -139,32 +140,6 @@
     margin-bottom: 24px;
   }
 }
-
-/* .icon-star {
-  padding: 2px;
-  width: 18px;
-  height: 18px;
-  fill: rgba(244, 244, 244, 0.2);
-} */
-
-/* .icon-star-empty {
-  padding: 2px;
-  width: 18px;
-  height: 18px;
-  fill: rgba(244, 244, 244, 0.2);
-} */
-
-/* .icon-star:nth-child(3n + 1) {
-  fill: var(--color-yellow); 
-}
-
-.icon-star:nth-child(3n + 2) {
-  fill: var(--color-yellow); 
-}
-
-.icon-star:nth-child(3n) {
-  fill: var(--color-yellow);
-} */
 
 .modal-exercises__block {
   margin-bottom: 40px;
@@ -283,7 +258,6 @@
 .btn-favorites__icon {
   stroke: var(--color-black);
   fill: var(--color-white);
-  padding-left: 4px;
   width: 18px;
   height: 18px;
   transition: all var(--transition-dur-and-func);
@@ -301,6 +275,12 @@
   background-color: transparent;
   color: var(--color-white);
   transition: all var(--transition-dur-and-func);
+}
+@media screen and (min-width: 768px) {
+  .modal-exercises__btn-rating {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 }
 
 .modal-exercises__btn-favorites:hover {

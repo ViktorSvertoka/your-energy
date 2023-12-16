@@ -63,7 +63,6 @@ function createRating(rating) {
       },
     ];
 
-    // Генерація linearGradient
     const linearGradient = `
         <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="0%">
           ${gradientStops
@@ -105,8 +104,8 @@ function createMarkup({
   const getExerciseGif = getGif(gifUrl);
   function getGif(gifUrl) {
     if (gifUrl === null || !gifUrl) {
-      return;
-      // Треба заглушку
+      return `srcset = './img/modal-exercise-image.jpg 1x,./img/modal-exercise-image@2x.jpg 2x'
+      src = './img/modal-exercise-image.jpg'`;
     }
     return `src="${gifUrl}"`;
   }
@@ -115,14 +114,14 @@ function createMarkup({
   <div class="modal-exercises__container" data-id="${_id}">
     <button class="modal-exercises__btn-close">
       <svg width="24" height="24">
-        <use href="./img/sprite.svg#icon-menu-mobile-close"></use>
+        <use href="/img/sprite.svg#icon-menu-mobile-close"></use>
       </svg>
     </button>
 
     <img
     class="modal-exercises__img"
     ${getExerciseGif}
-    alt="Exercise video"
+    alt="Exercise image"
     loading="lazy"
     />
 
@@ -164,7 +163,7 @@ function createMarkup({
         <button class="modal-exercises__btn-favorites modal-exercises__btn" data-id="${_id}">
             Add to favorites
             <svg class="btn-favorites__icon">
-              <use href="./img/sprite.svg#icon-favorites"></use>
+              <use href="/img/sprite.svg#icon-favorites"></use>
             </svg>
           </button>
         <button class="modal-exercises__btn-rating modal-exercises__btn">Give a rating</button>
@@ -181,7 +180,11 @@ function closeModalExercises() {
   document.body.style.overflow = 'auto';
 }
 
-overlay.addEventListener('click', closeModalExercises);
+overlay.addEventListener('click', function (event) {
+  if (event.target === overlay) {
+    closeModalExercises();
+  }
+});
 window.addEventListener('keydown', function (event) {
   if (event.key === 'Escape' && !modalExercises.classList.contains('hidden')) {
     closeModalExercises();
