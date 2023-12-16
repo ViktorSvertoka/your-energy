@@ -1,3 +1,5 @@
+import icons from '../img/sprite.svg';
+
 const localFavorite = document.querySelector('.favorites__list');
 
 localFavorite.addEventListener('click', removeElement);
@@ -17,15 +19,26 @@ function removeElement(event) {
 
   localStorage.setItem('exerciseData', JSON.stringify(newLocal));
 
-  createMarkup(newLocal);
+  createMarkup();
 }
 
-function createMarkup(newLocal) {
+function createMarkup() {
+  const newLocal = JSON.parse(localStorage.getItem('exerciseData'));
+
   if (newLocal.length === 0) {
-    return;
-  } else {
     localFavorite.innerHTML = '';
 
+    const markup = `
+     <li class="favorites__empty">
+            It appears that you haven't added any exercises to your favorites
+            yet. To get started, you can add exercises that you like to your
+            favorites for easier access in the future.
+          </li>
+    `;
+
+    localFavorite.insertAdjacentHTML('beforeend', markup);
+  } else {
+    localFavorite.innerHTML = '';
     const markup = newLocal
       .map(({ _id, name, burnedCalories, bodyPart, target }) => {
         return `
@@ -40,7 +53,7 @@ function createMarkup(newLocal) {
                 </svg>
               </button>
             </div>
-            <button class="fav-card__btn-start" data-id="${_id}" type="button">Start
+            <button class="fav-card__btn-start card__btn" data-id="${_id}" type="button">Start
               <svg class="fav-card__btn-start-svg" width="16" height="16">
                  <use href="${icons}#icon-arrow"></use>
               </svg>
