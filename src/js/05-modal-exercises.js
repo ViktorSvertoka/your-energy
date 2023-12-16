@@ -4,6 +4,8 @@ import image from '../img/modal-exercise-image.jpg';
 import imageRetina from '../img/modal-exercise-image@2x.jpg';
 const apiService = new APIService();
 
+let isFavorite = false;
+
 const modalExercises = document.querySelector('.modal-exercises');
 const overlay = document.querySelector('.overlay');
 const listItem = document.querySelector('.js-list');
@@ -25,6 +27,12 @@ async function onExercisesCardClick(event) {
     const markup = createMarkup(exerciseData);
     updateModal(markup);
     openModalExercises();
+
+    const btnModalFavorites = document.querySelector(
+      '.modal-exercises__btn-favorites'
+    );
+    btnModalFavorites.addEventListener('click', toggleFavorites);
+
     const btnModalClose = document.querySelector('.modal-exercises__btn-close');
     btnModalClose.addEventListener('click', closeModalExercises);
   } catch (error) {
@@ -112,7 +120,9 @@ function createMarkup({
     }
     return `src="${gifUrl}"`;
   }
+
   const ratingStarsHTML = createRating(rating);
+
   return `
   <div class="modal-exercises__container" data-id="${_id}">
     <button class="modal-exercises__btn-close">
@@ -161,19 +171,52 @@ function createMarkup({
           </ul>
           <p class="modal-exercises__description">${description}</p>
         </div>
-
       <div class="modal-exercises__btn-container">
-        <button class="modal-exercises__btn-favorites modal-exercises__btn" data-id="${_id}">
+        <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${_id}">
             Add to favorites
             <svg class="btn-favorites__icon">
               <use href="${icons}#icon-favorites"></use>
             </svg>
           </button>
-        <button class="modal-exercises__btn-rating modal-exercises__btn">Give a rating</button>
+        <button class="modal-exercises__btn-rating modal-exercises__btn" type="button">Give a rating</button>
       </div>
     </div>
   </div>
 `;
+}
+
+function toggleFavorites() {
+  isFavorite = !isFavorite;
+
+  const btnModalFavorites = document.querySelector(
+    '.modal-exercises__btn-favorites'
+  );
+  const favoritesIcon = document.querySelector('.btn-favorites__icon');
+
+  if (isFavorite) {
+    btnModalFavorites.innerHTML = createRemoveFromFavoritesMarkup();
+  } else {
+    btnModalFavorites.innerHTML = createAddToFavoritesMarkup();
+  }
+
+  const newFavoritesIcon = document.querySelector('.btn-favorites__icon');
+  newFavoritesIcon.addEventListener('click', toggleFavorites);
+}
+
+function createAddToFavoritesMarkup() {
+  return `
+  Add to favorites
+    <svg class="btn-favorites__icon">
+    <use href="${icons}#icon-favorites"></use>
+    </svg>`;
+}
+
+function createRemoveFromFavoritesMarkup() {
+  return `
+  Remove from favorites
+  <svg class="btn-favorites__icon">
+    <use href="${icons}#icon-trash"></use>
+  </svg>`;
 }
 
 function closeModalExercises() {
