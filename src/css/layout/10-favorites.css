@@ -387,7 +387,11 @@
     width: 415px;
   }
 }
-
+.fav-filters__item-card:hover,
+.fav-filters__item-card:focus {
+  border-radius: 15px;
+  box-shadow: 2px 2px #777;
+}
 .fav-card__badge {
   display: inline-block;
   padding: 5px 8px;
@@ -429,10 +433,21 @@
   background-color: transparent;
 }
 
+.fav-card__btn:hover {
+  transform: scale(1.1);
+}
+
+.fav-card__btn-start:hover,
+.fav-card__btn-start:focus {
+  transform: scale(1.1);
+}
+
 .fav-card__btn-trash-svg {
   padding: 0;
   width: 16px;
   height: 16px;
+  stroke: var(--color-black);
+  fill: var(--color-white);
 }
 
 .fav-card__btn-start {
