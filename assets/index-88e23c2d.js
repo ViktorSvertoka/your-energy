@@ -18,7 +18,7 @@ import{A as R,a as oe,i as A}from"./sprite-578f308f.js";document.addEventListene
   <div class="modal-exercises__container" data-id="${o}">
     <button class="modal-exercises__btn-close">
       <svg width="24" height="24">
-        <use href="/img/sprite.svg#icon-menu-mobile-close"></use>
+        <use href="../img/sprite.svg#icon-menu-mobile-close"></use>
       </svg>
     </button>
 
@@ -67,7 +67,7 @@ import{A as R,a as oe,i as A}from"./sprite-578f308f.js";document.addEventListene
         <button class="modal-exercises__btn-favorites modal-exercises__btn" data-id="${o}">
             Add to favorites
             <svg class="btn-favorites__icon">
-              <use href="/img/sprite.svg#icon-favorites"></use>
+              <use href="../img/sprite.svg#icon-favorites"></use>
             </svg>
           </button>
         <button class="modal-exercises__btn-rating modal-exercises__btn">Give a rating</button>
