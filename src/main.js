@@ -12,3 +12,4 @@ import './js/10-favorites';
 import './js/11-subscribe';
 import './js/12-exercises';
 import './js/13-hero';
+import './js/16-modal-bmi';
