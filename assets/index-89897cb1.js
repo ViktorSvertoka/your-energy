@@ -1,4 +1,4 @@
-import{A as k,i as _,a as oe}from"./sprite-c729b006.js";const re=document.querySelector(".js-quote"),ae=new k;le();async function le(){try{const r=await ae.getQuote();ce(r)}catch(r){console.log(r)}}function ce({author:r,quote:d}){re.innerHTML=`
+import{A as k,i as _,a as oe}from"./sprite-63057f13.js";const re=document.querySelector(".js-quote"),ae=new k;le();async function le(){try{const r=await ae.getQuote();ce(r)}catch(r){console.log(r)}}function ce({author:r,quote:d}){re.innerHTML=`
   <p class="quote__text">${d}</p>
   <h4 class="quote__author">${r}</h4>
     `}const de=new k,P=document.querySelector(".js-list");U("Muscles");async function U(r){try{const d=await de.getFilter(r);ue(d)}catch(d){console.log(d)}}function ue(r){const d=r.map(({filter:m,name:u,imgURL:i})=>`
