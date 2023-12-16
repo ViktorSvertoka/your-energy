@@ -34,7 +34,7 @@
   padding: 25px 15px 20px;
   visibility: visible;
   opacity: 1;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   border-radius: 10px;
   box-shadow: 0 28px 42px rgba(0, 0, 0, 0.38), 0 20px 20px rgba(0, 0, 0, 0.33);
 }
@@ -68,7 +68,7 @@
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
-  stroke: var(--color-black);
+  stroke: var(--color-white);
 }
 
 @media screen and (min-width: 768px) {
@@ -79,7 +79,7 @@
 }
 
 .team__modal-close-btn:hover {
-  stroke: var(--color-green);
+  stroke: #EEA10C;
 }
 
 .team__modal-close-icon {
@@ -89,7 +89,7 @@
 .team__title {
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: var(--color-white);
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -148,7 +148,7 @@
 .team__role {
   font-weight: 500;
   font-size: 16px;
-  color: var(--color-green);
+  color: #EEA10C;
   margin-bottom: 10px;
 }
 
@@ -185,6 +185,6 @@
 
 .team__link-github--active:hover,
 .team__link-github--active:focus {
-  background-color: var(--color-green);
+  background-color: #EEA10C;
   fill: var(--color-white);
 }
