@@ -7,7 +7,7 @@ buttonFavorite.addEventListener('click', renderFavorite());
 
 function renderFavorite() {
   const local = JSON.parse(localStorage.getItem('exerciseData'));
-  if (local === null) {
+  if (local.length === 0) {
     return;
   } else {
     localFavorite.innerHTML = '';
@@ -26,7 +26,7 @@ function renderFavorite() {
                 </svg>
               </button>
             </div>
-            <button class="fav-card__btn-start" data-id="${_id}" type="button">Start
+            <button class="fav-card__btn-start card__btn" data-id="${_id}" type="button">Start
               <svg class="fav-card__btn-start-svg" width="16" height="16">
                  <use href="${icons}#icon-arrow"></use>
               </svg>

@@ -70,17 +70,4 @@
       <ul class="filters__list js-list"></ul>
     </div>
   </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const buttons = document.querySelectorAll('.exercises__btn');
-
-      buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          buttons.forEach(btn => btn.classList.remove('active'));
-          button.classList.add('active');
-        });
-      });
-    });
-  </script>
 </section>

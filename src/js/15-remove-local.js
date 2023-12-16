@@ -1,3 +1,5 @@
+import icons from '../img/sprite.svg';
+
 const localFavorite = document.querySelector('.favorites__list');
 
 localFavorite.addEventListener('click', removeElement);
@@ -17,44 +19,59 @@ function removeElement(event) {
 
   localStorage.setItem('exerciseData', JSON.stringify(newLocal));
 
-  createMarkup(newLocal);
+  createMarkup();
 }
 
-function createMarkup(newLocal) {
+function createMarkup() {
+  const newLocal = JSON.parse(localStorage.getItem('exerciseData'));
+
   if (newLocal.length === 0) {
-    return;
-  } else {
     localFavorite.innerHTML = '';
 
+    const markup = `
+     <li class="favorites__empty">
+            It appears that you haven't added any exercises to your favorites
+            yet. To get started, you can add exercises that you like to your
+            favorites for easier access in the future.
+          </li>
+    `;
+
+    localFavorite.insertAdjacentHTML('beforeend', markup);
+  } else {
+    localFavorite.innerHTML = '';
     const markup = newLocal
       .map(({ _id, name, burnedCalories, bodyPart, target }) => {
         return `
-      <li class="filters__item-card">
-        <div class="card__wrap">
-          <div class="card__block-btn">
-              <p class="card__badge">Workout</p>
-              <button class="card__btn" id="remove" data-id="${_id}" type="button">Remove
-                <svg class="card__btn-arrow" width="16" height="16">
-                  <use href="${icons}#icon-arrow-menu-mobile"></use>
-                </svg>
-              </button>
-              <button class="card__btn" data-id="${_id}" type="button">Start
-                <svg class="card__btn-arrow" width="16" height="16">
-                  <use href="${icons}#icon-arrow-menu-mobile"></use>
+      <li class="fav-filters__item-card">
+        <div class="fav-card__wrap">
+          <div class="fav-card__block-btn">
+            <div class="fav-card__trash-btn-wrap">
+              <p class="fav-card__badge">Workout</p>
+              <button class="fav-card__btn js-remove-btn" data-id="${_id}" type="button">
+                <svg class="fav-card__btn-trash-svg" width="16" height="16">
+                <use href="${icons}#icon-trash"></use>
                 </svg>
               </button>
             </div>
-              <div class="card__wrap-title">
-                <svg class="card__title-svg" width="24" height="24">
-                  <use href="${icons}#icon-running-stick-figure"></use>
-                </svg>
-                <h2 class="card__title">${name}</h2>
-              </div>
-              <div class="card__block-info">
-                <p class="card__text-info"><span>Burned calories:</span>${burnedCalories}</p>
-                <p class="card__text-info"><span>Body part:</span>${bodyPart}</p>
-                <p class="card__text-info"><span>Target:</span>${target}</p>
-              </div>
+            <button class="fav-card__btn-start card__btn" data-id="${_id}" type="button">Start
+              <svg class="fav-card__btn-start-svg" width="16" height="16">
+                 <use href="${icons}#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="fav-card__title-wrap">
+            <svg class="fav-card__title-svg" width="24" height="24">
+              <use href="${icons}#icon-running-stick-figure"></use>
+            </svg>
+            <h2 class="fav-card__title">${name}</h2>
+          </div>
+
+          <div class="fav-card__block-info">
+            <p class="fav-card__text-info"><span>Burned calories:</span>${burnedCalories}</p>
+            <p class="fav-card__text-info"><span>Body part:</span>${bodyPart}</p>
+            <p class="fav-card__text-info"><span>Target:</span>${target}</p>
+          </div>
         </div>
       </li>`;
       })
