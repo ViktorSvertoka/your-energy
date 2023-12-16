@@ -14,10 +14,8 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/index-8992abf3.js"></script>
-    <link rel="modulepreload" crossorigin href="/your-energy/assets/sprite-578f308f.js">
-    <link rel="stylesheet" href="/your-energy/assets/sprite-11356b3a.css">
-    <link rel="stylesheet" href="/your-energy/assets/index-e5212ee8.css">
+    <script type="module" crossorigin src="/your-energy/assets/main-af1d6e8e.js"></script>
+    <link rel="stylesheet" href="/your-energy/assets/main-229c580a.css">
   </head>
   <body>
     <header>
@@ -491,51 +489,66 @@
 
 </div>
 <div class="rating-container">
+  <a class="rating-close-btn">
+    <svg class="rating-icon-close">
+      <use href="./img/icons.svg#icon-close-btn"></use>
+    </svg>
+  </a>
 
     <a class="rating-close-btn">
         <svg class="rating-icon-close">
-            <use href="../img/sprite.svg#icon-close-btn"></use>
+            <use href="/your-energy/assets/sprite-d1b8f2c8.svg#icon-close-btn"></use>
         </svg>
     </a>
 
     <fieldset class="rating-fieldset">
         <legend class="rating-title">Rating</legend>
 
-        <p class="rating-value">0.0</p>
+    <input class="rating-input" type="ratio" id="star1" name="rating" />
+    <label class="rating-label" for="star1">
+      <svg class="rating-star">
+        <use href="/your-energy/assets/sprite-d1b8f2c8.svg#icon-star"></use>
+      </svg>
+    </label>
+    <input class="rating-input" type="ratio" id="star2" name="rating" />
+    <label class="rating-label" for="star2">
+      <svg class="rating-star">
+        <use href="/your-energy/assets/sprite-d1b8f2c8.svg#icon-star"></use>
+      </svg>
+    </label>
+    <input class="rating-input" type="ratio" id="star3" name="rating" />
+    <label class="rating-label" for="star3">
+      <svg class="rating-star">
+        <use href="/your-energy/assets/sprite-d1b8f2c8.svg#icon-star"></use>
+      </svg>
+    </label>
+    <input class="rating-input" type="ratio" id="star4" name="rating" />
+    <label class="rating-label" for="star4">
+      <svg class="rating-star">
+        <use href="/your-energy/assets/sprite-d1b8f2c8.svg#icon-star"></use>
+      </svg>
+    </label>
+    <input class="rating-input" type="ratio" id="star5" name="rating" />
+    <label class="rating-label" for="star5">
+      <svg class="rating-star">
+        <use href="/your-energy/assets/sprite-d1b8f2c8.svg#icon-star"></use>
+      </svg>
+    </label>
+  </fieldset>
+  <form class="rating-form">
+    <input
+      class="rating-email"
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+    />
 
-        <input class="rating-input" type="ratio" id="star1" name="rating" />
-        <label class="rating-label" for="star1">
-            <svg class="rating-star">
-                <use href="../img/sprite.svg#icon-star"></use>
-            </svg>
-        </label>
-        <input class="rating-input" type="ratio" id="star2" name="rating" />
-        <label class="rating-label" for="star2">
-            <svg class="rating-star">
-                <use href="../img/sprite.svg#icon-star"></use>
-            </svg>
-        </label>
-        <input class="rating-input" type="ratio" id="star3" name="rating" />
-        <label class="rating-label" for="star3">
-            <svg class="rating-star">
-                <use href="../img/sprite.svg#icon-star"></use>
-            </svg>
-        </label>
-        <input class="rating-input" type="ratio" id="star4" name="rating" />
-        <label class="rating-label" for="star4">
-            <svg class="rating-star">
-                <use href="../img/sprite.svg#icon-star"></use>
-            </svg>
-        </label>
-        <input class="rating-input" type="ratio" id="star5" name="rating" />
-        <label class="rating-label" for="star5">
-            <svg class="rating-star">
-                <use href="../img/sprite.svg#icon-star"></use>
-            </svg>
-        </label>
-    </fieldset>
-    <form class="rating-form">
-        <input class="rating-email" type="email" name="email" placeholder="Email" required>
+    <textarea
+      class="rating-comment"
+      name="comment"
+      placeholder="Your comment"
+    ></textarea>
 
         <textarea class="rating-comment" name="comment" placeholder="Your comment"></textarea>
 
@@ -543,6 +556,7 @@
     </form>
 </div>
 </div>
+
       <!-- <div class="team team__backdrop is-hidden">
   <div class="team__wrapper">
     <button class="team__modal-close-btn" type="button">
