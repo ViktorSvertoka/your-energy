@@ -1,12 +1,12 @@
 /* exercises styles */
 
 .filters__list {
-  width: 375px;
+  max-width: 375px;
 }
 
 @media screen and (min-width: 768px) {
   .filters__list {
-    width: 704px;
+    max-width: 704px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -16,9 +16,15 @@
 
 @media screen and (min-width: 1440px) {
   .filters__list {
-    width: 900px;
+    max-width: 900px;
     margin-left: auto;
   }
+}
+
+.filters__item-card:hover,
+.filters__item:hover {
+  border-radius: 15px;
+  box-shadow: 2px 2px #777;
 }
 
 @media screen and (max-width: 767px) {
@@ -44,14 +50,14 @@
 @media screen and (min-width: 768px) {
   .filters__item-card {
     flex-basis: calc((100% - 16px) / 2);
-    width: 344px;
+    max-width: 344px;
     position: relative;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .filters__item-card {
-    width: 442px;
+    max-width: 442px;
   }
 }
 .exersices__container {
@@ -93,6 +99,7 @@
   letter-spacing: -0.56px;
   color: var(--color-black);
 }
+
 @media screen and (min-width: 768px) {
   .exersices__title {
     font-size: 44px;
@@ -329,6 +336,9 @@
   border: none;
 }
 
+.card__btn:hover {
+  transform: scale(1.1);
+}
 .card__btn-arrow {
   stroke: var(--color-black);
 }
@@ -357,6 +367,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.card__title::first-letter {
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 767px) {

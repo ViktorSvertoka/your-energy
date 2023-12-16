@@ -19,7 +19,9 @@ ol {
   padding: 0;
   list-style: none;
 }
-
+li {
+  cursor: pointer;
+}
 a {
   color: currentColor;
   text-decoration: none;
