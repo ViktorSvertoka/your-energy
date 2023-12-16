@@ -1,4 +1,4 @@
-import{A as D,a as se,i as N}from"./05-modal-exercises-65434497.js";const oe=document.querySelector(".js-quote"),re=new D;ae();async function ae(){try{const r=await re.getQuote();le(r)}catch(r){console.log(r)}}function le({author:r,quote:d}){oe.innerHTML=`
+import{A as D,a as se,i as N}from"./05-modal-exercises-27d6cf76.js";const oe=document.querySelector(".js-quote"),re=new D;ae();async function ae(){try{const r=await re.getQuote();le(r)}catch(r){console.log(r)}}function le({author:r,quote:d}){oe.innerHTML=`
   <p class="quote__text">${d}</p>
   <h4 class="quote__author">${r}</h4>
     `}const ce=new D,G=document.querySelector(".js-list");U("Muscles");async function U(r){try{const d=await ce.getFilter(r);de(d)}catch(d){console.log(d)}}function de(r){const d=r.map(({filter:p,name:f,imgURL:n})=>`
