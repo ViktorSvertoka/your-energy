@@ -22,7 +22,7 @@ async function onExercisesCardClick(event) {
     const local = JSON.parse(localStorage.getItem('exerciseData'));
 
     if (local?.some(item => item._id === exerciseData._id)) {
-      return;
+      array = local.filter(item => item._id !== exerciseData._id);
     } else {
       array.push(exerciseData);
     }

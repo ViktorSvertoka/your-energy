@@ -5,6 +5,7 @@ import imageRetina from '../img/modal-exercise-image@2x.jpg';
 const apiService = new APIService();
 
 let isFavorite = false;
+let idFavorite;
 
 const modalExercises = document.querySelector('.modal-exercises');
 const overlay = document.querySelector('.overlay');
@@ -23,6 +24,8 @@ async function onExercisesCardClick(event) {
       .getAttribute('data-id');
 
     const exerciseData = await apiService.getExercisesById(exerciseID);
+
+    idFavorite = exerciseID;
 
     const markup = createMarkup(exerciseData);
     updateModal(markup);
@@ -186,11 +189,18 @@ function createMarkup({
 }
 
 function toggleFavorites() {
-  isFavorite = !isFavorite;
+  // isFavorite = !isFavorite;
+
+  const local = JSON.parse(localStorage.getItem('exerciseData'));
+
+  if (local?.some(item => item._id === idFavorite)) {
+    isFavorite = true;
+  }
 
   const btnModalFavorites = document.querySelector(
     '.modal-exercises__btn-favorites'
   );
+
   const favoritesIcon = document.querySelector('.btn-favorites__icon');
 
   if (isFavorite) {
