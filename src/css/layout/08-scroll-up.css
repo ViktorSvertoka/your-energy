@@ -1,17 +1,19 @@
 .scroll__go-top {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 30px;
+  right: 30px;
   z-index: 1000;
   display: none;
   padding: 2px 4px;
   border: none;
   background: no-repeat scroll #242424;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   opacity: 0.8;
   cursor: pointer;
+  padding: 7px;
+  margin: 0;
 }
 
 .scroll__go-top:hover,
@@ -32,8 +34,8 @@
 }
 
 .scroll__icon {
-  width: 100%;
-  height: 100%;
+  width: 13px;
+  height: 13px;
   fill: #f4f4f4;
 }
 
