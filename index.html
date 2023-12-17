@@ -14,9 +14,9 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/index-83a63b0e.js"></script>
-    <link rel="modulepreload" crossorigin href="/your-energy/assets/05-modal-exercises-8f1e2f0a.js">
-    <link rel="stylesheet" href="/your-energy/assets/05-modal-exercises-2c3aadff.css">
+    <script type="module" crossorigin src="/your-energy/assets/index-3714d8d5.js"></script>
+    <link rel="modulepreload" crossorigin href="/your-energy/assets/05-modal-exercises-0674a876.js">
+    <link rel="stylesheet" href="/your-energy/assets/05-modal-exercises-da7c7515.css">
     <link rel="stylesheet" href="/your-energy/assets/index-e5212ee8.css">
   </head>
   <body>
@@ -532,65 +532,77 @@
   <div class="modal-exercises hidden"></div>
 </div>
 
-      <!-- <div class="is-hidden"></div>
-<div class="rating-container">
-  <a class="rating-close-btn">
-    <svg class="rating-icon-close">
-      <use href="./img/sprite.svg#icon-close-btn"></use>
-    </svg>
-  </a>
+      <!-- <div class="modal-rating overlay is-hidden">
+  <div class="rating-container">
 
-  <fieldset class="rating-fieldset">
-    <legend class="rating-title">Rating</legend>
+    <a class="rating-close-btn">
+      <svg class="rating-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+        fill="none">
+        <path d="M19.8334 8.16675L8.16675 19.8334M8.16675 8.16675L19.8334 19.8334" stroke="#F4F4F4" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
 
-    <input class="rating-input" type="ratio" id="star1" name="rating" />
-    <label class="rating-label" for="star1">
-      <svg class="rating-star">
-        <use href="./img/sprite.svg#icon-star"></use>
-      </svg>
-    </label>
-    <input class="rating-input" type="ratio" id="star2" name="rating" />
-    <label class="rating-label" for="star2">
-      <svg class="rating-star">
-        <use href="./img/sprite.svg#icon-star"></use>
-      </svg>
-    </label>
-    <input class="rating-input" type="ratio" id="star3" name="rating" />
-    <label class="rating-label" for="star3">
-      <svg class="rating-star">
-        <use href="./img/sprite.svg#icon-star"></use>
-      </svg>
-    </label>
-    <input class="rating-input" type="ratio" id="star4" name="rating" />
-    <label class="rating-label" for="star4">
-      <svg class="rating-star">
-        <use href="./img/sprite.svg#icon-star"></use>
-      </svg>
-    </label>
-    <input class="rating-input" type="ratio" id="star5" name="rating" />
-    <label class="rating-label" for="star5">
-      <svg class="rating-star">
-        <use href="./img/sprite.svg#icon-star"></use>
-      </svg>
-    </label>
-  </fieldset>
-  <form class="rating-form">
-    <input
-      class="rating-email"
-      type="email"
-      name="email"
-      placeholder="Email"
-      required
-    />
-    <textarea
-      class="rating-comment"
-      name="comment"
-      placeholder="Your comment"
-    ></textarea>
-    <button class="rating-submit-btn" type="submit">Send</button>
-  </form>
-</div>
- -->
+    <fieldset class="rating-fieldset">
+      <legend>Rating</legend>
+
+      <p class="rating-value">0.0</p>
+
+      <input class="rating-input" type="ratio" id="star1" name="rating" />
+      <label class="rating-label" for="star1">
+        <svg class="rating-star" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"
+          fill="none">
+          <path
+            d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+            fill="#F4F4F4" fill-opacity="0.2" />
+        </svg>
+      </label>
+      <input class="rating-input" type="ratio" id="star2" name="rating" />
+      <label class="rating-label" for="star2">
+        <svg class="rating-star" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"
+          fill="none">
+          <path
+            d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+            fill="#F4F4F4" fill-opacity="0.2" />
+        </svg>
+      </label>
+      <input class="rating-input" type="ratio" id="star3" name="rating" />
+      <label class="rating-label" for="star3">
+        <svg class="rating-star" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"
+          fill="none">
+          <path
+            d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+            fill="#F4F4F4" fill-opacity="0.2" />
+        </svg>
+      </label>
+      <input class="rating-input" type="ratio" id="star4" name="rating" />
+      <label class="rating-label" for="star4">
+        <svg class="rating-star" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"
+          fill="none">
+          <path
+            d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+            fill="#F4F4F4" fill-opacity="0.2" />
+        </svg>
+      </label>
+      <input class="rating-input" type="ratio" id="star5" name="rating" />
+      <label class="rating-label" for="star5">
+        <svg class="rating-star" xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"
+          fill="none">
+          <path
+            d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+            fill="#F4F4F4" fill-opacity="0.2" />
+        </svg>
+      </label>
+    </fieldset>
+    <form class="rating-form">
+      <input class="rating-email" type="email" name="email" placeholder="Email" required>
+
+      <textarea class="rating-comment" name="comment" placeholder="Your comment"></textarea>
+
+      <button class="rating-submit-btn" type="submit">Send</button>
+    </form>
+  </div>
+</div> -->
       <div class="team team__backdrop is-hidden">
   <div class="team__wrapper">
     <button class="team__modal-close-btn" type="button">
