@@ -1,14 +1,14 @@
-var svg = document.getElementById('mySVG');
+let svg = document.getElementById('mySVG');
 
 svg.style.transform = 'scale(1)';
 svg.style.transition = 'fill 0.3s ease, transform 0.3s ease';
 
-var colors = [
+let colors = [
   'var(--color-yellow)',
   'var(--color-black)',
   'var(--color-valid)',
 ];
-var currentColorIndex = 0;
+let currentColorIndex = 0;
 
 svg.addEventListener('mouseover', function () {
   svg.style.fill = colors[currentColorIndex];

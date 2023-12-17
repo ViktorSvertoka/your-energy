@@ -58,6 +58,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .text__element {
   position: relative;
 }
