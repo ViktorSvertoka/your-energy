@@ -53,11 +53,19 @@
 .rating-icon-close:focus {
   cursor: pointer;
   border-radius: 50%;
-  background-color: #f4f4f4;
+  background-color: #000000;
 }
 
 .rating-input {
   display: none;
+}
+
+.rating-star {
+  fill: rgba(244, 244, 244, 0.2);
+}
+
+.rating-star.rated {
+  fill: #eea10c;
 }
 
 .rating-label {
