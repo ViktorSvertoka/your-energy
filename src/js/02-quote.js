@@ -7,8 +7,25 @@ const apiService = new APIService();
 quote();
 
 async function quote() {
+  const quoteData = JSON.parse(localStorage.getItem('quoteDay'));
+  const currentDate = new Date();
+
+  currentDate.setDate(currentDate.getDate());
+
+  const newData = currentDate.toISOString().split('T')[0];
+
+  if (quoteData?.currentDate === newData) {
+    return;
+  }
+
   try {
     const data = await apiService.getQuote();
+    const combinedData = {
+      data: data,
+      currentDate: newData,
+    };
+
+    localStorage.setItem('quoteDay', JSON.stringify(combinedData));
     displayQuote(data);
   } catch (error) {
     console.log(error);
