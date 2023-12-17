@@ -1,4 +1,3 @@
-
 import APIService from './00-api';
 import icons from '../img/sprite.svg';
 const apiService = new APIService();
@@ -65,3 +64,17 @@ function renderExercises(data) {
     .join('');
   listItem.insertAdjacentHTML('beforeend', markup);
 }
+
+/**
+ * Filter buttons toggle
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.exercises__btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+  });
+});
