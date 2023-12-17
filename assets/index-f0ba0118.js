@@ -1,4 +1,4 @@
-import{A as H,i as N,a as me}from"./05-modal-exercises-b8eabf1f.js";const ge=new H,X=document.querySelector(".js-list");V("Muscles");async function V(r){try{const d=await ge.getFilter(r);ve(d)}catch(d){console.log(d)}}function ve(r){const d=r.map(({filter:p,name:f,imgURL:n})=>`
+import{A as H,i as N,a as me}from"./05-modal-exercises-50014dae.js";const ge=new H,X=document.querySelector(".js-list");V("Muscles");async function V(r){try{const d=await ge.getFilter(r);ve(d)}catch(d){console.log(d)}}function ve(r){const d=r.map(({filter:p,name:f,imgURL:n})=>`
   <li class="filters__item">
     <img class="filters__img-first" src="${n}"></img>
     <div class="filters__wrapper-first">

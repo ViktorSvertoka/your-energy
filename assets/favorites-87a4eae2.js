@@ -1,4 +1,4 @@
-import{i as t}from"./05-modal-exercises-b8eabf1f.js";const e=document.querySelector(".favorites__list"),d=document.getElementById("favoritesButton");d.addEventListener("click",v());function v(){const a=JSON.parse(localStorage.getItem("exerciseData"));if(!(a==null||a.length===0)){e.innerHTML="";const r=a.map(({_id:s,name:c,burnedCalories:n,bodyPart:i,target:o})=>`
+import{i as t}from"./05-modal-exercises-50014dae.js";const e=document.querySelector(".favorites__list"),d=document.getElementById("favoritesButton");d.addEventListener("click",v());function v(){const a=JSON.parse(localStorage.getItem("exerciseData"));if(!(a==null||a.length===0)){e.innerHTML="";const r=a.map(({_id:s,name:c,burnedCalories:n,bodyPart:i,target:o})=>`
       <li class="fav-filters__item-card">
         <div class="fav-card__wrap">
           <div class="fav-card__block-btn">
