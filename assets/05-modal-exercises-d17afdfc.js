@@ -58,7 +58,9 @@
           </ul>
           <p class="modal-exercises__description">${i}</p>
         </div>
-      <div class="modal-exercises__btn-container">
+    </div>
+  </div>
+  <div class="modal-exercises__btn-container">
         <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${e}">
             Add to favorites
             <svg class="btn-favorites__icon">
@@ -66,8 +68,6 @@
             </svg>
           </button>
         <button class="modal-exercises__btn-rating modal-exercises__btn" type="button">Give a rating</button>
-      </div>
-    </div>
   </div>
 `}function kn(){const e=JSON.parse(localStorage.getItem("exerciseData")),t=document.querySelector(".modal-exercises__btn-favorites");e!=null&&e.some(n=>n._id===Ge)?(v=!0,t.innerHTML=Qe()):(v=!1,t.innerHTML=Xe())}function Dn(){v=!v;const e=document.querySelector(".modal-exercises__btn-favorites");v?e.innerHTML=Qe():e.innerHTML=Xe()}function Xe(){return`
   Add to favorites
