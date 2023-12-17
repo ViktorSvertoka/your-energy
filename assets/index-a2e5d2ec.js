@@ -1,4 +1,4 @@
-import{A as U,a as de,i as N}from"./05-modal-exercises-96cc9cd3.js";const ue=new U,X=document.querySelector(".js-list");V("Muscles");async function V(a){try{const u=await ue.getFilter(a);fe(u)}catch(u){console.log(u)}}function fe(a){const u=a.map(({filter:p,name:f,imgURL:n})=>`
+import{A as U,a as de,i as N}from"./05-modal-exercises-b8eabf1f.js";const ue=new U,X=document.querySelector(".js-list");V("Muscles");async function V(a){try{const u=await ue.getFilter(a);fe(u)}catch(u){console.log(u)}}function fe(a){const u=a.map(({filter:p,name:f,imgURL:n})=>`
   <li class="filters__item">
     <img class="filters__img-first" src="${n}"></img>
     <div class="filters__wrapper-first">
