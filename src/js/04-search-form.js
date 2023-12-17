@@ -1,11 +1,9 @@
 import APIService from './00-api';
+import { renderExercises } from './12-exercises';
 const apiService = new APIService();
 
-const searchButton = document.getElementById('search__button');
-const searchInput = document.getElementById('search__input');
-const listItem = document.querySelector('.js-list');
-
-listItem.addEventListener('click', onSearch);
+const searchButton = document.querySelector('.search__button');
+const searchInput = document.querySelector('.search__input');
 
 let query = '';
 
@@ -22,25 +20,20 @@ searchInput.addEventListener('keydown', function (event) {
 });
 
 async function onSearch(event) {
+  const { filter, name } = JSON.parse(localStorage.getItem('paramSearch'));
+
   const searchQuery = searchInput.value.trim();
 
-  if (!event.target.closest('.filters__item')) {
+  if (searchQuery === '') {
     return;
   }
 
-  const item = event.target.closest('.filters__item');
-
-  const filter = item.children[0].innerText.toLowerCase();
-  const name = item.children[1].innerText.toLowerCase();
-
   try {
     const data = await apiService.getSearch(filter, name, searchQuery);
-    console.log(data);
+    renderExercises(data);
   } catch (error) {
     console.log(error);
   }
-
-  listItem.innerHTML = '';
 
   query = searchQuery;
 }

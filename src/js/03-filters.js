@@ -7,6 +7,7 @@ getFiltersExercises('Muscles');
 async function getFiltersExercises(params) {
   try {
     const data = await apiService.getFilter(params);
+
     displayExercises(data);
   } catch (error) {
     console.log(error);
