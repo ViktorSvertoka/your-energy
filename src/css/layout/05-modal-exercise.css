@@ -42,12 +42,22 @@
   position: relative;
   z-index: 100;
   overflow: auto;
-  max-width: 100%;
-
   max-height: 80vh;
   padding: 40px 20px;
   border-radius: 20px;
   background-color: var(--color-black);
+}
+
+@media screen and (max-width: 375px) {
+  .modal-exercises {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .modal-exercises {
+    width: 335px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -220,7 +230,6 @@
 .modal-exercises__btn-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 10px;
 }
@@ -228,7 +237,7 @@
 @media screen and (min-width: 768px) {
   .modal-exercises__btn-container {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: end;
     gap: 7px;
   }
 }
@@ -239,6 +248,12 @@
   line-height: 1.28;
   border-radius: 30px;
 }
+@media screen and (max-width: 767px) {
+  .modal-exercises__btn {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .modal-exercises__btn {
     width: 100%;
@@ -285,6 +300,7 @@
   color: var(--color-white);
   transition: all var(--transition-dur-and-func);
 }
+
 @media screen and (min-width: 768px) {
   .modal-exercises__btn-rating {
     padding-left: 22px;
