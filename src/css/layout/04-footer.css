@@ -267,6 +267,7 @@
 @media screen and (min-width: 768px) {
   .footer__text-outer-wrap {
     display: flex;
+    justify-content: space-between;
     width: 704px;
     gap: 78px;
     margin-top: 64px;
@@ -275,7 +276,7 @@
 
 @media screen and (min-width: 1440px) {
   .footer__text-outer-wrap {
-    width: 1068px;
+    width: 100%;
     gap: 122px;
     margin-top: 70px;
   }
@@ -290,13 +291,15 @@
 @media screen and (min-width: 768px) {
   .footer__text-inner-wrap {
     margin-top: 0px;
-    gap: 178px;
+    /* gap: 178px; */
+    gap: 60px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .footer__text-inner-wrap {
-    gap: 498px;
+    /* gap: 498px; */
+    gap: 187px;
   }
 }
 .privacy-policy__text {
@@ -307,7 +310,6 @@
 .footer__link {
   text-align: center;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
+  align-items: center;
+  justify-content: center;
 }

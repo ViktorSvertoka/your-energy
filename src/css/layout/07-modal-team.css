@@ -36,7 +36,6 @@
   opacity: 1;
   background-color: var(--color-black);
   border-radius: 10px;
-  box-shadow: 0 28px 42px rgba(0, 0, 0, 0.38), 0 20px 20px rgba(0, 0, 0, 0.33);
 }
 
 @media screen and (min-width: 768px) {
@@ -79,7 +78,7 @@
 }
 
 .team__modal-close-btn:hover {
-  stroke: #EEA10C;
+  stroke: #eea10c;
 }
 
 .team__modal-close-icon {
@@ -103,18 +102,14 @@
 
 .team__item {
   border-radius: 5px;
-  background-color: var(--color-white);
-  color: var(--color-white);
-  position: relative;
   border-radius: 10px;
   padding-bottom: 5px;
-  overflow: hidden;
+  transition: all var(--transition-dur-and-func);
 }
 
 .team__item:hover,
 .team__item:focus {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }
 
 .team__wrap {
@@ -130,8 +125,6 @@
 }
 
 .team__box {
-  /* Replace with your font properties */
-  background-color: var(--color-white);
   font-weight: 500;
   font-size: 16px;
   padding: 10px;
@@ -140,16 +133,16 @@
 }
 
 .team__member {
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--color-black);
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--color-white);
   margin-bottom: 10px;
 }
 
 .team__role {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  color: #EEA10C;
+  color: rgba(244, 244, 244, 0.6);
   margin-bottom: 10px;
 }
 
@@ -160,16 +153,17 @@
   border-radius: 10%;
   margin-right: 10px;
   background-color: transparent;
-  fill: var(--color-black);
+  fill: rgba(244, 244, 244, 0.6);
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: all var(--transition-dur-and-func);
 }
 
 .team__link-linkedin--active:hover,
 .team__link-linkedin--active:focus {
-  background-color: #EEA10C;
   fill: var(--color-white);
+  transform: scale(1.1);
 }
 
 .team__link-github {
@@ -178,14 +172,15 @@
   height: 36px;
   border-radius: 50%;
   background-color: transparent;
-  fill: var(--color-black);
+  fill: rgba(244, 244, 244, 0.6);
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: all var(--transition-dur-and-func);
 }
 
 .team__link-github--active:hover,
 .team__link-github--active:focus {
-  background-color: #EEA10C;
   fill: var(--color-white);
+  transform: scale(1.1);
 }
