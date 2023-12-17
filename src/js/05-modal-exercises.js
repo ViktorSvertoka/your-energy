@@ -4,6 +4,7 @@ import image from '../img/modal-exercise-image.jpg';
 import imageRetina from '../img/modal-exercise-image@2x.jpg';
 const apiService = new APIService();
 
+let isFavorite = false;
 let idFavorite;
 
 const modalExercises = document.querySelector('.modal-exercises');
@@ -33,7 +34,7 @@ async function onExercisesCardClick(event) {
     const btnModalFavorites = document.querySelector(
       '.modal-exercises__btn-favorites'
     );
-    btnModalFavorites.addEventListener('click', toggleFavorites);
+    btnModalFavorites.addEventListener('click', toggleBtn);
     const btnModalClose = document.querySelector('.modal-exercises__btn-close');
     btnModalClose.addEventListener('click', closeModalExercises);
   } catch (error) {
@@ -52,6 +53,8 @@ function openModalExercises() {
 
 function updateModal(markup) {
   modalExercises.innerHTML = markup;
+
+  toggleFavorites();
 }
 
 function createRating(rating) {
@@ -173,6 +176,18 @@ function createMarkup({
           <p class="modal-exercises__description">${description}</p>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+  </div>
+  <div class="modal-exercises__btn-container">
+        <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${_id}">
+            Add to favorites
+            <svg class="btn-favorites__icon">
+              <use href="${icons}#icon-favorites"></use>
+            </svg>
+          </button>
+        <button class="modal-exercises__btn-rating modal-exercises__btn" type="button">Give a rating</button>
+>>>>>>> 8c3641318954f88879c80815f488b558eacce8bc
   </div>
   <div class="modal-exercises__btn-container">
   <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${_id}">
@@ -188,12 +203,27 @@ function createMarkup({
 
 function toggleFavorites() {
   const local = JSON.parse(localStorage.getItem('exerciseData'));
-  console.log(local);
+
   const btnModalFavorites = document.querySelector(
     '.modal-exercises__btn-favorites'
   );
 
-  if (local?.some(item => item._id === idFavorite) || local == null) {
+  if (local?.some(item => item._id === idFavorite)) {
+    isFavorite = true;
+    btnModalFavorites.innerHTML = createRemoveFromFavoritesMarkup();
+  } else {
+    isFavorite = false;
+    btnModalFavorites.innerHTML = createAddToFavoritesMarkup();
+  }
+}
+
+function toggleBtn() {
+  isFavorite = !isFavorite;
+  const btnModalFavorites = document.querySelector(
+    '.modal-exercises__btn-favorites'
+  );
+
+  if (isFavorite) {
     btnModalFavorites.innerHTML = createRemoveFromFavoritesMarkup();
   } else {
     btnModalFavorites.innerHTML = createAddToFavoritesMarkup();

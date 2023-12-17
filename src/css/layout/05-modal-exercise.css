@@ -248,6 +248,11 @@
   line-height: 1.28;
   border-radius: 30px;
 }
+@media screen and (max-width: 767px) {
+  .modal-exercises__btn {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .modal-exercises__btn {
