@@ -4,6 +4,8 @@ import image from '../img/modal-exercise-image.jpg';
 import imageRetina from '../img/modal-exercise-image@2x.jpg';
 const apiService = new APIService();
 
+import { createMarkupFavorite } from './15-remove-local';
+
 let isFavorite = false;
 let idFavorite;
 
@@ -211,10 +213,17 @@ function toggleBtn() {
     '.modal-exercises__btn-favorites'
   );
 
+  const localFavorite = document.querySelector('.favorites__list');
+
   if (isFavorite) {
     btnModalFavorites.innerHTML = createRemoveFromFavoritesMarkup();
   } else {
     btnModalFavorites.innerHTML = createAddToFavoritesMarkup();
+    localFavorite == null
+      ? console.log('ku ku')
+      : setTimeout(() => {
+          createMarkupFavorite();
+        }, 100);
   }
 }
 

@@ -7,7 +7,9 @@ buttonFavorite.addEventListener('click', renderFavorite());
 
 export function renderFavorite() {
   const local = JSON.parse(localStorage.getItem('exerciseData'));
-  if (local.length === 0) {
+  console.log('favorite', local);
+
+  if (local == null || local.length === 0) {
     return;
   } else {
     localFavorite.innerHTML = '';

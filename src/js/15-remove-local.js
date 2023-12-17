@@ -1,6 +1,6 @@
 import icons from '../img/sprite.svg';
 
-const localFavorite = document.querySelector('.favorites__list');
+const localFavorite = document.querySelector('.js-list');
 
 localFavorite.addEventListener('click', removeElement);
 
@@ -19,10 +19,10 @@ function removeElement(event) {
 
   localStorage.setItem('exerciseData', JSON.stringify(newLocal));
 
-  createMarkup();
+  createMarkupFavorite();
 }
 
-function createMarkup() {
+export function createMarkupFavorite() {
   const newLocal = JSON.parse(localStorage.getItem('exerciseData'));
 
   if (newLocal.length === 0) {
