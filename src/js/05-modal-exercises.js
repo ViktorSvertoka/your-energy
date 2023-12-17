@@ -172,17 +172,17 @@ function createMarkup({
           </ul>
           <p class="modal-exercises__description">${description}</p>
         </div>
-      <div class="modal-exercises__btn-container">
-        <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${_id}">
-            Add to favorites
-            <svg class="btn-favorites__icon">
-              <use href="${icons}#icon-favorites"></use>
-            </svg>
-          </button>
-        <button class="modal-exercises__btn-rating modal-exercises__btn" type="button">Give a rating</button>
-      </div>
     </div>
   </div>
+  <div class="modal-exercises__btn-container">
+  <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${_id}">
+      Add to favorites
+      <svg class="btn-favorites__icon">
+        <use href="${icons}#icon-favorites"></use>
+      </svg>
+    </button>
+  <button class="modal-exercises__btn-rating modal-exercises__btn" type="button">Give a rating</button>
+</div>
 `;
 }
 

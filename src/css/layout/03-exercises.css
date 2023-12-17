@@ -289,7 +289,7 @@
   padding: 0;
   width: 58px;
   height: 24px;
-  font-size: 16;
+  font-size: 16px;
   transition: var(--transition-dur-and-func);
   border: none;
 }
