@@ -433,7 +433,8 @@
   background-color: transparent;
 }
 
-.fav-card__btn:hover {
+.fav-card__btn:hover,
+.fav-card__btn:focus {
   transform: scale(1.1);
 }
 
