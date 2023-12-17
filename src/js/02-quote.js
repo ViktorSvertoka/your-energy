@@ -9,9 +9,6 @@ quote();
 async function quote() {
   const quoteData = JSON.parse(localStorage.getItem('quoteDay'));
   const currentDate = new Date();
-
-  currentDate.setDate(currentDate.getDate());
-
   const newData = currentDate.toISOString().split('T')[0];
 
   if (quoteData?.currentDate === newData) {
