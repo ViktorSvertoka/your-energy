@@ -4,7 +4,6 @@ import image from '../img/modal-exercise-image.jpg';
 import imageRetina from '../img/modal-exercise-image@2x.jpg';
 const apiService = new APIService();
 
-let isFavorite = false;
 let idFavorite;
 
 const modalExercises = document.querySelector('.modal-exercises');
@@ -35,7 +34,6 @@ async function onExercisesCardClick(event) {
       '.modal-exercises__btn-favorites'
     );
     btnModalFavorites.addEventListener('click', toggleFavorites);
-
     const btnModalClose = document.querySelector('.modal-exercises__btn-close');
     btnModalClose.addEventListener('click', closeModalExercises);
   } catch (error) {
@@ -189,28 +187,17 @@ function createMarkup({
 }
 
 function toggleFavorites() {
-  // isFavorite = !isFavorite;
-
   const local = JSON.parse(localStorage.getItem('exerciseData'));
-
-  if (local?.some(item => item._id === idFavorite)) {
-    isFavorite = true;
-  }
-
+  console.log(local);
   const btnModalFavorites = document.querySelector(
     '.modal-exercises__btn-favorites'
   );
 
-  const favoritesIcon = document.querySelector('.btn-favorites__icon');
-
-  if (isFavorite) {
+  if (local?.some(item => item._id === idFavorite) || local == null) {
     btnModalFavorites.innerHTML = createRemoveFromFavoritesMarkup();
   } else {
     btnModalFavorites.innerHTML = createAddToFavoritesMarkup();
   }
-
-  const newFavoritesIcon = document.querySelector('.btn-favorites__icon');
-  newFavoritesIcon.addEventListener('click', toggleFavorites);
 }
 
 function createAddToFavoritesMarkup() {

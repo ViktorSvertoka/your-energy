@@ -77,7 +77,8 @@
   }
 }
 
-.team__modal-close-btn:hover {
+.team__modal-close-btn:hover,
+.team__modal-close-btn:focus {
   stroke: #eea10c;
 }
 
