@@ -82,7 +82,6 @@
     padding: 8px;
     border: 1px solid rgba(36, 36, 36, 0.1);
     border-radius: 10px;
-    transition: all var(--transition-dur-and-func);
   }
 }
 
@@ -125,7 +124,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 70vw;
+  width: 100vw;
   height: 100%;
   padding: 20px;
   background-color: var(--color-black);
