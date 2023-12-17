@@ -1,10 +1,52 @@
 <div class="bmi__backdrop is-hidden">
   <div class="bmi__wrapper">
     <button class="bmi__modal-close-btn" type="button">
-      <svg class="bmi__modal-close-icon" width="20" height="20">
+      <svg class="bmi__modal-close-icon" width="16" height="16">
         <use href="./sprite.svg#icon-cross-closed"></use>
       </svg>
     </button>
-    <h1>HELLO</h1>
+    <h2 class="bmi__bmi-title">
+      <span class="bmi__bmi-title-part">Body</span> Mass Index (BMI) Calculator
+    </h2>
+    <div class="bmi__content-wrap">
+      <div class="bmi__img-wrap">
+        <img
+          class="bmi__bmi-pic"
+          src="./img/hero-image-bmi.jpg"
+          srcset="./img/hero-image-bmi@2x.jpg 2x"
+          alt="young woman working out alone outdoors"
+        />
+      </div>
+
+      <div class="bmi__calc-wrap">
+        <label class="bmi__label">
+          Your Height (cm):
+          <input
+            type="number"
+            class="bmi__input"
+            id="height"
+            value="180"
+            readonly="false"
+            placeholder="Enter your height in cm"
+        /></label>
+        <label class="bmi__label"
+          >Your Weight (kg):
+          <input
+            type="number"
+            class="bmi__input"
+            id="weight"
+            value="80"
+            readonly="false"
+            placeholder="Enter your weight in kg"
+        /></label>
+        <button class="bmi__btn" id="btn">Compute BMI</button>
+      </div>
+    </div>
+    <input disabled type="text" class="bmi__input-result" id="bmi-result" />
+
+    <h3 class="bmi__info-text">
+      Weight Condition:
+      <span id="weight-condition" class="bmi__info-result"></span>
+    </h3>
   </div>
 </div>

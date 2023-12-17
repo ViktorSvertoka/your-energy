@@ -484,6 +484,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: brightness(0.5);
   width: 100%;
   height: 242px;
 }
@@ -566,6 +567,35 @@
     }
   }
 }
+
+/* BMI link styles */
+
+.aside__nail {
+  position: relative;
+}
+
+.bmi__link-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bmi__link {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1em;
+  color: var(--color-white);
+}
+
+.bmi__span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: rgba(244, 244, 244, 0.4);
+}
+
 /* White Card */
 .aside__white-card {
   position: relative;
