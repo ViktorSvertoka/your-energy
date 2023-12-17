@@ -26,7 +26,7 @@ async function onExercisesCardClick(event) {
     } else {
       array.push(exerciseData);
     }
-    console.log('btn', array);
+
     localStorage.setItem('exerciseData', JSON.stringify(array));
   } catch (error) {
     console.log(error);

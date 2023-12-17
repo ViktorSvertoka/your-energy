@@ -178,18 +178,6 @@ function createMarkup({
           <p class="modal-exercises__description">${description}</p>
         </div>
     </div>
-<<<<<<< HEAD
-=======
-  </div>
-  <div class="modal-exercises__btn-container">
-        <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${_id}">
-            Add to favorites
-            <svg class="btn-favorites__icon">
-              <use href="${icons}#icon-favorites"></use>
-            </svg>
-          </button>
-        <button class="modal-exercises__btn-rating modal-exercises__btn" type="button">Give a rating</button>
->>>>>>> 8c3641318954f88879c80815f488b558eacce8bc
   </div>
   <div class="modal-exercises__btn-container">
   <button class="modal-exercises__btn-favorites modal-exercises__btn" type="button" data-id="${_id}">
@@ -232,7 +220,7 @@ function toggleBtn() {
   } else {
     btnModalFavorites.innerHTML = createAddToFavoritesMarkup();
     localFavorite == null
-      ? console.log('ku ku')
+      ? console.log('')
       : setTimeout(() => {
           createMarkupFavorite();
         }, 100);
