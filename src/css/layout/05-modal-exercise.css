@@ -219,12 +219,16 @@
 
 .modal-exercises__btn-container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 10px;
 }
 
 @media screen and (min-width: 768px) {
   .modal-exercises__btn-container {
+    flex-direction: row;
+    justify-content: flex-end;
     gap: 7px;
   }
 }
@@ -234,6 +238,11 @@
   font-size: 14px;
   line-height: 1.28;
   border-radius: 30px;
+}
+@media screen and (max-width: 767px) {
+  .modal-exercises__btn {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
