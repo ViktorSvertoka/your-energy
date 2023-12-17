@@ -14,9 +14,9 @@
     />
     <title>Your Energy</title>
     
-    <script type="module" crossorigin src="/your-energy/assets/index-3fcb074c.js"></script>
-    <link rel="modulepreload" crossorigin href="/your-energy/assets/05-modal-exercises-6dd90fc7.js">
-    <link rel="stylesheet" href="/your-energy/assets/05-modal-exercises-5d9051d7.css">
+    <script type="module" crossorigin src="/your-energy/assets/index-d9bdaa22.js"></script>
+    <link rel="modulepreload" crossorigin href="/your-energy/assets/05-modal-exercises-db692d62.js">
+    <link rel="stylesheet" href="/your-energy/assets/05-modal-exercises-6e42fb98.css">
     <link rel="stylesheet" href="/your-energy/assets/index-e5212ee8.css">
   </head>
   <body>
@@ -248,11 +248,11 @@
         </li>
       </ul>
     </div>
-    <div class="hero__bmi-wrap">
+    <!-- <div class="hero__bmi-wrap">
       <img
         class="hero__bmi-pic"
-        src="/your-energy/assets/hero-image-bmi-fabe04ed.jpg"
-        srcset="/your-energy/assets/hero-image-bmi@2x-d7bdf692.jpg 2x"
+        src="./img/hero-image-bmi.jpg"
+        srcset="./img/hero-image-bmi@2x.jpg 2x"
         alt="young woman working out alone outdoors"
       />
       <div class="hero__bmi">
@@ -284,7 +284,7 @@
           Weight Condition: <span id="weight-condition"></span>
         </h3>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -328,9 +328,12 @@
             <div class="aside-quote__wrapper js-quote"></div>
           </div>
         </li>
-        <li>
+        <li class="aside__nail">
           <div class="aside__img"></div>
-          <a href="./11-modal-bmi.html" class="bmi__link">BMI</a>
+          <div class="bmi__link-block">
+            <a href="../partials/11-modal-bmi.html" class="bmi__link">BMI</a>
+            <p class="bmi__span">Calculator</p>
+          </div>
         </li>
         <li>
           <div class="aside__white-card">
@@ -365,11 +368,53 @@
       <div class="bmi__backdrop is-hidden">
   <div class="bmi__wrapper">
     <button class="bmi__modal-close-btn" type="button">
-      <svg class="bmi__modal-close-icon" width="20" height="20">
+      <svg class="bmi__modal-close-icon" width="16" height="16">
         <use href="./sprite.svg#icon-cross-closed"></use>
       </svg>
     </button>
-    <h1>HELLO</h1>
+    <h2 class="bmi__bmi-title">
+      <span class="bmi__bmi-title-part">Body</span> Mass Index (BMI) Calculator
+    </h2>
+    <div class="bmi__content-wrap">
+      <div class="bmi__img-wrap">
+        <img
+          class="bmi__bmi-pic"
+          src="/your-energy/assets/hero-image-bmi-fabe04ed.jpg"
+          srcset="/your-energy/assets/hero-image-bmi@2x-d7bdf692.jpg 2x"
+          alt="young woman working out alone outdoors"
+        />
+      </div>
+
+      <div class="bmi__calc-wrap">
+        <label class="bmi__label">
+          Your Height (cm):
+          <input
+            type="number"
+            class="bmi__input"
+            id="height"
+            value="180"
+            readonly="false"
+            placeholder="Enter your height in cm"
+        /></label>
+        <label class="bmi__label"
+          >Your Weight (kg):
+          <input
+            type="number"
+            class="bmi__input"
+            id="weight"
+            value="80"
+            readonly="false"
+            placeholder="Enter your weight in kg"
+        /></label>
+        <button class="bmi__btn" id="btn">Compute BMI</button>
+      </div>
+    </div>
+    <input disabled type="text" class="bmi__input-result" id="bmi-result" />
+
+    <h3 class="bmi__info-text">
+      Weight Condition:
+      <span id="weight-condition" class="bmi__info-result"></span>
+    </h3>
   </div>
 </div>
 
@@ -473,10 +518,10 @@
           <span>Privacy Policy</span><span>&sol;</span
           ><span>Terms of Service</span>
         </p>
-        <p class="footer__text">©2023</p>
         <a href="./07-modal-team.html" class="footer__link footer__text"
           >Our team</a
         >
+        <p class="footer__text">©2023</p>
       </div>
     </div>
   </div>
@@ -555,14 +600,15 @@
         <use href="./sprite.svg#icon-cross-closed"></use>
       </svg>
     </button>
-    <h2 class="team__title">👩‍🎤DEV TITANS👨‍🎤</h2>
+    <h2 class="team__title">DEV TITANS TEAM</h2>
     <ul class="team__list">
       <li class="team__item">
         <div class="team__wrap">
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/viktor_svertoka-cab6887d.jpg"
+            src="/your-energy/assets/viktor_svertoka-1628c367.jpg"
+            srcset="/your-energy/assets/viktor_svertoka@2x-6ed11868.jpg 2x"
             alt="Viktor Svertoka"
           />
         </div>
@@ -596,7 +642,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/andrew_motko-298979da.jpg"
+            src="/your-energy/assets/andrew_motko-8f548036.jpg"
+            srcset="/your-energy/assets/andrew_motko@2x-274212b1.jpg 2x"
             alt="Andrew Motko"
           />
         </div>
@@ -630,7 +677,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/lesia_soloviova-b140d0aa.jpg"
+            src="/your-energy/assets/lesia_soloviova-7dd0f669.jpg"
+            srcset="/your-energy/assets/lesia_soloviova@2x-cf64386e.jpg 2x"
             alt="Lesia Soloviova"
           />
         </div>
@@ -664,7 +712,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/alina_riabova-3203c663.jpg"
+            src="/your-energy/assets/alina_riabova-7127b8bd.jpg"
+            srcset="/your-energy/assets/alina_riabova@2x-c060dbd3.jpg 2x"
             alt="Alina Riabova"
           />
         </div>
@@ -698,7 +747,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/svitlana_savchenko-fd2f4293.jpg"
+            src="/your-energy/assets/svitlana_savchenko-8308e5db.jpg"
+            srcset="/your-energy/assets/svitlana_savchenko@2x-88f9682a.jpg 2x"
             alt="Svitlana Savchenko"
           />
         </div>
@@ -732,7 +782,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/tetiana_zorii-3f67ff79.jpg"
+            src="/your-energy/assets/tetiana_zorii-0dadf404.jpg"
+            srcset="/your-energy/assets/tetiana_zorii@2x-5b75db4d.jpg 2x"
             alt="Tetiana Zorii"
           />
         </div>
@@ -766,7 +817,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/vadym_andriushchenko-634876a4.jpg"
+            src="/your-energy/assets/vadym_andriushchenko-57cdc794.jpg"
+            srcset="/your-energy/assets/vadym_andriushchenko@2x-07094423.jpg 2x"
             alt="Vadym Andriushchenko"
           />
         </div>
@@ -800,7 +852,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/yuliia_nazymko-337e0f04.jpg"
+            src="/your-energy/assets/yuliia_nazymko-bcbc157d.jpg"
+            srcset="/your-energy/assets/yuliia_nazymko@2x-ae838f1c.jpg 2x"
             alt="Yuliia Nazymko"
           />
         </div>
@@ -834,7 +887,8 @@
           <img
             class="team__img"
             loading="lazy"
-            src="/your-energy/assets/yevheni-datsenko-93740759.jpg"
+            src="/your-energy/assets/yevheni-datsenko-3d314226.jpg"
+            srcset="/your-energy/assets/yevheni-datsenko@2x-8e3389b0.jpg 2x"
             alt="Yevhenii Datsenko"
           />
         </div>
