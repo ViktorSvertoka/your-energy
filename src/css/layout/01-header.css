@@ -11,9 +11,14 @@
   transition: all var(--transition-dur-and-func);
 }
 
+.header__logo-text {
+  display: none;
+}
+
 .header__logo:hover,
 .header__logo:focus {
   transform: scale(1.1);
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -61,7 +66,8 @@
   background-color: var(--color-white);
 }
 
-.active:hover {
+.active:hover,
+.active:focus {
   cursor: default;
 }
 
@@ -127,6 +133,10 @@
   .menu-open__button {
     display: none;
   }
+}
+
+.burger-btn {
+  display: none;
 }
 
 .menu-container {

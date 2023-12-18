@@ -19,7 +19,7 @@ function displayExercises(data) {
     .map(({ filter, name, imgURL }) => {
       return `
   <li class="filters__item">
-    <img class="filters__img-first" src="${imgURL}"></img>
+    <img class="filters__img-first" src="${imgURL}" alt="${name}" width="290" height="242"></img>
     <div class="filters__wrapper-first">
     <h2 class="filters__title-first">${filter}</h2>
     <p class="filters__text-first">${name}</p>
