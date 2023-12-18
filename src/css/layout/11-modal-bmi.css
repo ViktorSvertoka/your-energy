@@ -166,6 +166,12 @@
   transition: all var(--transition-dur-and-func);
 }
 
+.bmi__btn:hover {
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
 .bmi__info-text {
   font-size: 14px;
   font-weight: 500;
