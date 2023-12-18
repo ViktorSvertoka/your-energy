@@ -17,6 +17,12 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .footer__container {
+    margin-top: 68px;
+  }
+}
+
 .footer__logo {
   fill: var(--color-white);
 }
