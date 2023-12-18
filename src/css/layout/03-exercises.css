@@ -620,7 +620,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.6);
   width: 100%;
   height: 242px;
 }
@@ -702,6 +702,11 @@
       background-size: cover;
     }
   }
+}
+
+.aside__img:hover,
+.aside__img:focus {
+  filter: brightness(0.8);
 }
 
 /* BMI link styles */
