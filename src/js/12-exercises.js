@@ -4,6 +4,8 @@ import icons from '../img/sprite.svg';
 const apiService = new APIService();
 const listItem = document.querySelector('.js-list');
 const searchForm = document.querySelector('.search__form');
+const span = document.querySelector('.exersices__span');
+const text = document.querySelector('.exersices__text');
 listItem.addEventListener('click', onCardClick);
 
 async function onCardClick(event) {
@@ -32,9 +34,16 @@ async function onCardClick(event) {
   try {
     const data = await apiService.getExercises(filter, name);
     renderExercises(data);
+    textExercises(data);
   } catch (error) {
     console.log(error);
   }
+}
+
+function textExercises(data) {
+  text.innerText = `${data[0].bodyPart}`;
+  text.classList.remove('hidden');
+  span.classList.remove('hidden');
 }
 
 export function renderExercises(data) {
@@ -78,9 +87,6 @@ export function renderExercises(data) {
   listItem.insertAdjacentHTML('beforeend', markup);
 }
 
-/**
- * Filter buttons toggle
- */
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.exercises__btn');
 
@@ -89,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
       buttons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
       searchForm.classList.add('hidden');
+      text.classList.add('hidden');
+      span.classList.add('hidden');
     });
   });
 });

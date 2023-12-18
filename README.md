@@ -1,4 +1,4 @@
-![Landing Page](./assets)
+![Landing Page](./assets/screencapture.png)
 
 # Development team :
 

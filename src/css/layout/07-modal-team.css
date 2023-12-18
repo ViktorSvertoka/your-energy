@@ -102,6 +102,7 @@
 }
 
 .team__item {
+  cursor: initial;
   border-radius: 5px;
   border-radius: 10px;
   padding-bottom: 5px;

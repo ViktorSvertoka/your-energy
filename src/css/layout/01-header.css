@@ -7,6 +7,15 @@
   padding: 20px 0 80px;
 }
 
+.header__logo {
+  transition: all var(--transition-dur-and-func);
+}
+
+.header__logo:hover,
+.header__logo:focus {
+  transform: scale(1.1);
+}
+
 @media screen and (min-width: 768px) {
   .header-container {
     padding: 24px 0 100px;
@@ -43,6 +52,7 @@
   line-height: 1.5em;
   border-radius: 30px;
   color: var(--color-white);
+  transition: all var(--transition-dur-and-func);
 }
 
 .active {
@@ -82,12 +92,14 @@
     padding: 8px;
     border: 1px solid rgba(36, 36, 36, 0.1);
     border-radius: 10px;
+    transition: all var(--transition-dur-and-func);
   }
 }
 
 @media screen and (min-width: 768px) {
   .header__socials-icon {
     fill: rgba(36, 36, 36, 0.8);
+    transition: all var(--transition-dur-and-func);
   }
 }
 

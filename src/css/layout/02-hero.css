@@ -22,6 +22,7 @@
 
 @media screen and (min-width: 1440px) {
   .hero__pic {
+    cursor: initial;
     position: absolute;
     display: inline-flex;
     top: 12px;
@@ -33,6 +34,7 @@
 }
 
 .hero__icon-title {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: flex-start;
