@@ -14,13 +14,11 @@
 
 .is-hidden {
   visibility: hidden;
-  pointer-events: none;
   opacity: 0;
 }
 
 .is-hidden .bmi__wrapper {
   visibility: hidden;
-  pointer-events: none;
   opacity: 0.3;
   transform: translate(-75%, -90%) scale(3);
 }
@@ -166,6 +164,12 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: all var(--transition-dur-and-func);
+}
+
+.bmi__btn:hover {
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .bmi__info-text {
