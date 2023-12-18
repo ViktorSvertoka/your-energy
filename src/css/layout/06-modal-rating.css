@@ -9,7 +9,7 @@
   padding: 40px 20px;
   border-radius: 20px;
   background: #242424;
-  z-index: 100;
+  z-index: 101;
 }
 
 @media screen and (min-width: 768px) {
