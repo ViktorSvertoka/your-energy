@@ -14,13 +14,11 @@
 
 .is-hidden {
   visibility: hidden;
-  pointer-events: none;
   opacity: 0;
 }
 
 .is-hidden .bmi__wrapper {
   visibility: hidden;
-  pointer-events: none;
   opacity: 0.3;
   transform: translate(-75%, -90%) scale(3);
 }
