@@ -192,6 +192,7 @@
   background-color: var(--color-black);
 
   color: rgba(244, 244, 244, 0.6);
+  transition: all var(--transition-dur-and-func);
 }
 
 .subscribe__form-input:focus {

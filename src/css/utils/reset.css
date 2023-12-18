@@ -19,9 +19,13 @@ ol {
   padding: 0;
   list-style: none;
 }
-li {
+
+li,
+button,
+input {
   cursor: pointer;
 }
+
 a {
   color: currentColor;
   text-decoration: none;

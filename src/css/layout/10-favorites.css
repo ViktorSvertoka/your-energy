@@ -178,6 +178,7 @@
 }
 
 .img-card__container {
+  cursor: initial;
   border-radius: 20px;
   margin: 0 auto;
   background: linear-gradient(
@@ -274,6 +275,7 @@
 }
 
 .favorite__white-card {
+  cursor: initial;
   min-height: 119px;
   padding: 20px;
   border-radius: 20px;
@@ -346,10 +348,6 @@
   }
 }
 
-/* .favorites__container {
-  border: 1px solid green;
-} */
-
 /* Favorites section card styles */
 
 .favorites__list {
@@ -362,35 +360,75 @@
   .favorites__list {
     flex-direction: row;
     flex-wrap: wrap;
+
     justify-content: space-between;
     gap: 14px;
     row-gap: 32px;
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .favorites__list {
+    align-items: start;
+    max-height: none;
+    overflow-y: auto;
+    gap: 15px;
+    row-gap: 32px;
+  }
+
+  .scrollable {
+    max-height: 516px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(36, 36, 36, 0.1);
+    border-radius: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-black);
+    border-radius: 12px;
+    margin-right: 16px;
+  }
+}
+
 .fav-filters__item-card {
-  /* border: 1px solid red; */
   width: 100%;
   padding: 16px;
   border-radius: 15px;
   background-color: var(--color-white-secondary);
+  cursor: initial;
 }
 
 @media screen and (min-width: 768px) {
   .fav-filters__item-card {
-    width: 344px;
+    width: 342px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .fav-filters__item-card {
-    width: 415px;
+    width: 403px;
+    height: 147px;
+  }
+
+  .favorites__list li:nth-child(2n) {
+    margin-right: 16px;
+  }
+
+  .favorites__list li:last-child {
+    margin-bottom: 30px;
   }
 }
 .fav-filters__item-card:hover,
 .fav-filters__item-card:focus {
   border-radius: 15px;
-  box-shadow: 2px 2px #777;
+  box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.25),
+    10px 5px 5px rgba(0, 0, 0, 0.22);
 }
 .fav-card__badge {
   display: inline-block;
@@ -405,7 +443,6 @@
 }
 
 .fav-card__block-btn {
-  /* border: 1px solid green; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -413,7 +450,6 @@
 }
 
 .fav-card__trash-btn-wrap {
-  /* border: 1px solid blueviolet; */
   width: 100px;
   display: flex;
   align-items: center;
@@ -471,7 +507,6 @@
 }
 
 .fav-card__title-wrap {
-  /* border: 1px solid rebeccapurple; */
   display: flex;
   align-items: center;
   gap: 16px;
@@ -481,7 +516,7 @@
 .fav-card__title {
   font-size: 20px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 1.5;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
