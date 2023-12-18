@@ -217,6 +217,11 @@ function toggleBtn() {
 
   if (isFavorite) {
     btnModalFavorites.innerHTML = createRemoveFromFavoritesMarkup();
+    localFavorite == null
+      ? console.log('')
+      : setTimeout(() => {
+          createMarkupFavorite();
+        }, 100);
   } else {
     btnModalFavorites.innerHTML = createAddToFavoritesMarkup();
     localFavorite == null

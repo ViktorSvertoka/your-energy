@@ -8,15 +8,20 @@
   border: none;
   background: no-repeat scroll #242424;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   opacity: 0.8;
   cursor: pointer;
   padding: 7px;
   margin: 0;
   z-index: 90;
 }
-
+@media screen and (min-width: 768px) {
+  .scroll__go-top {
+    width: 100px;
+    height: 100px;
+  }
+}
 .scroll__go-top:hover,
 .scroll__go-top:focus {
   background: #f4f4f4;
@@ -40,6 +45,12 @@
   fill: #f4f4f4;
 }
 
+@media screen and (min-width: 768px) {
+  .scroll__icon {
+    width: 33px;
+    height: 33px;
+  }
+}
 .scroll__icon:hover,
 .scroll__icon:focus {
   fill: #242424;

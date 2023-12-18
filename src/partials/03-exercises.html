@@ -1,24 +1,37 @@
 <!-- exercises -->
 <section class="section">
   <div class="exersices__container container">
-    <h2 class="exersices__title">Exercises</h2>
-    <ul class="exersices__list">
-      <li>
-        <button class="exercises__btn btnFilters active" type="button">
-          Muscles
+    <h2 class="exersices__title">
+      Exercises<span class="exersices__span hidden"><span>&sol;</span></span>
+      <a class="exersices__text hidden"></a>
+    </h2>
+    <div class="exersices__search-btn-wrap">
+      <form class="search__form hidden">
+        <input class="search__input" type="text" placeholder="Search" />
+        <button class="search__button" type="button">
+          <svg class="search__icon" width="18" height="18">
+            <use href="./img/sprite.svg#icon-search"></use>
+          </svg>
         </button>
-      </li>
-      <li>
-        <button class="exercises__btn btnFilters" type="button">
-          Body parts
-        </button>
-      </li>
-      <li>
-        <button class="exercises__btn btnFilters" type="button">
-          Equipment
-        </button>
-      </li>
-    </ul>
+      </form>
+      <ul class="exersices__list">
+        <li>
+          <button class="exercises__btn btnFilters active" type="button">
+            Muscles
+          </button>
+        </li>
+        <li>
+          <button class="exercises__btn btnFilters" type="button">
+            Body parts
+          </button>
+        </li>
+        <li>
+          <button class="exercises__btn btnFilters" type="button">
+            Equipment
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <div class="quote-filters__container container">
@@ -71,6 +84,7 @@
 
     <div class="filters__container">
       <ul class="filters__list js-list"></ul>
+      <div id="pagination-numbers"></div>
     </div>
   </div>
 </section>

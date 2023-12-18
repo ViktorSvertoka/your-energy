@@ -58,6 +58,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .text__element {
   position: relative;
 }
@@ -78,4 +82,24 @@ body {
   .text__element::after {
     height: 20px;
   }
+}
+
+#pagination-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pagination-button {
+  background-color: transparent;
+  border: none;
+}
+
+.active-btn {
+  background-color: transparent;
+  width: 32px;
+  padding: 5px 12px;
+  border-radius: 18px;
+  border: 1px solid #242424;
 }
