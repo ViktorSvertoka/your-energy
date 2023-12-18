@@ -10,14 +10,13 @@ export default class APIService {
     this.page = 0;
   }
 
-  async getExercises(params1, params2) {
+  async getExercises(params1, params2, page) {
     try {
-      this.page += 1;
-
       const response = await axios.get(
-        `${this.baseURL}exercises?${params1}=${params2}&page=1&limit=10`
+        `${this.baseURL}exercises?${params1}=${params2}&page=${page}&limit=10`
       );
-      return response.data.results;
+
+      return response.data;
     } catch (error) {
       console.log(error);
     }
@@ -25,7 +24,6 @@ export default class APIService {
 
   async getSearch(params1, params2, params3) {
     try {
-      this.page += 1;
       const response = await axios.get(
         `${this.baseURL}exercises?${params1}=${params2}&keyword=${params3}&page=1&limit=10`
       );
@@ -38,8 +36,6 @@ export default class APIService {
 
   async getExercisesById(_id) {
     try {
-      this.page += 1;
-
       const response = await axios.get(`${this.baseURL}exercises/${_id}`);
 
       return response.data;
@@ -48,13 +44,13 @@ export default class APIService {
     }
   }
 
-  async getFilter(params) {
+  async getFilter(params, page) {
     try {
       const response = await axios.get(
-        `${this.baseURL}filters?filter=${params}`
+        `${this.baseURL}filters?filter=${params}&page=${page}&limit=12`
       );
 
-      return response.data.results;
+      return response.data;
     } catch (error) {
       console.log(error);
     }

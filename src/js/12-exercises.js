@@ -3,9 +3,12 @@ import icons from '../img/sprite.svg';
 
 const apiService = new APIService();
 const listItem = document.querySelector('.js-list');
+const paginationButtons = document.getElementById('pagination-numbers');
 const searchForm = document.querySelector('.search__form');
 const span = document.querySelector('.exersices__span');
 const text = document.querySelector('.exersices__text');
+let currentPage = 1;
+
 listItem.addEventListener('click', onCardClick);
 
 async function onCardClick(event) {
@@ -32,23 +35,29 @@ async function onCardClick(event) {
   localStorage.setItem('paramSearch', JSON.stringify(obj));
 
   try {
-    const data = await apiService.getExercises(filter, name);
-    renderExercises(data);
-    textExercises(data);
+    const { results, totalPages } = await apiService.getExercises(
+      filter,
+      name,
+      currentPage
+    );
+
+    setupPagination({ filter, name, totalPages });
+    renderExercises(results);
+    textExercises(results);
   } catch (error) {
     console.log(error);
   }
 }
 
-function textExercises(data) {
-  text.innerText = `${data[0].bodyPart}`;
+function textExercises(results) {
+  text.innerText = `${results[0].bodyPart}`;
   text.classList.remove('hidden');
   span.classList.remove('hidden');
 }
 
-export function renderExercises(data) {
+export function renderExercises(results) {
   listItem.innerHTML = '';
-  const markup = data
+  const markup = results
     .map(({ _id, rating, name, burnedCalories, bodyPart, target }) => {
       return `
       <li class="filters__item-card">
@@ -100,3 +109,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+async function setCurrentPage(filter, name, i) {
+  currentPage = i;
+  try {
+    const { results, totalPages } = await apiService.getExercises(
+      filter,
+      name,
+      currentPage
+    );
+
+    setupPagination({ filter, name, totalPages });
+    renderExercises(results);
+    textExercises(results);
+  } catch (error) {
+    console.log(error);
+  }
+  handleActivePageNumber();
+  scrollToTop();
+}
+
+function setupPagination({ filter, name, totalPages }) {
+  paginationButtons.innerHTML = '';
+
+  if (totalPages <= 1) return;
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageNumber = document.createElement('button');
+    pageNumber.className = 'pagination-button';
+    pageNumber.textContent = i;
+
+    paginationButtons.appendChild(pageNumber);
+
+    pageNumber.addEventListener('click', () => {
+      setCurrentPage(filter, name, i);
+    });
+  }
+  handleActivePageNumber();
+}
+
+const handleActivePageNumber = () => {
+  document.querySelectorAll('.pagination-button').forEach((button, page) => {
+    button.classList.remove('active-btn');
+    if (page + 1 === currentPage) {
+      button.classList.add('active-btn');
+    }
+  });
+};
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 830,
+    behavior: 'auto',
+  });
+}
