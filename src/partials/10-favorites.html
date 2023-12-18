@@ -43,26 +43,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const listContainer = document.querySelector('.favorites__list');
-    const listItemSelector = '.fav-filters__item-card';
-    const minItemsToShowScroll = 6;
-
-    const checkScroll = () => {
-      const listItems = listContainer.querySelectorAll(listItemSelector);
-      if (listItems.length > minItemsToShowScroll) {
-        listContainer.classList.add('scrollable');
-      } else {
-        listContainer.classList.remove('scrollable');
-      }
-    };
-
-    checkScroll();
-    const observer = new MutationObserver(mutations => {
-      checkScroll();
-    });
-    observer.observe(listContainer, { childList: true, subtree: true });
-  });
-</script>

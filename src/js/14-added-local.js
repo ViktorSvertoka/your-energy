@@ -54,3 +54,61 @@ export function renderFavorite() {
     localFavorite.insertAdjacentHTML('beforeend', markup);
   }
 }
+
+/**
+ * Favorites section. Scroll apearence and width control in a desktop breakpoint so that the shadow of a single card fits into the card-list container.
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const listContainer = document.querySelector('.favorites__list');
+  const listItemSelector = '.fav-filters__item-card';
+  const minItemsToShowScroll = 6;
+  const fixedWidth = 420;
+
+  const checkScroll = () => {
+    const listItems = listContainer.querySelectorAll(listItemSelector);
+    if (listItems.length > minItemsToShowScroll) {
+      listContainer.classList.add('scrollable');
+    } else {
+      listContainer.classList.remove('scrollable');
+    }
+  };
+
+  const checkWidth = () => {
+    const listItems = listContainer.querySelectorAll(listItemSelector);
+    if (listItems.length === 1) {
+      listContainer.style.width = `${fixedWidth}px`;
+    } else {
+      listContainer.style.width = 'auto';
+    }
+  };
+
+  // A function for checking the break point and applying styles
+  const applyStyles = () => {
+    const screenWidth =
+      window.innerWidth || document.documentElement.clientWidth;
+    if (screenWidth >= 1440) {
+      checkWidth();
+    } else {
+      // For smaller screens, reset the established styles
+      listContainer.style.width = 'auto';
+    }
+  };
+
+  // We call both functions when the page is loaded
+  checkScroll();
+  applyStyles();
+
+  // We set up mutation observers to track changes inside the container
+  const observerScroll = new MutationObserver(mutations => {
+    checkScroll();
+  });
+  observerScroll.observe(listContainer, { childList: true, subtree: true });
+
+  const observerWidth = new MutationObserver(mutations => {
+    applyStyles();
+  });
+  observerWidth.observe(listContainer, { childList: true, subtree: true });
+
+  // We add a window size change listener to update styles when the width is changed
+  window.addEventListener('resize', applyStyles);
+});
