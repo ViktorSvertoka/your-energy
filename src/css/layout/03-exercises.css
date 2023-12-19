@@ -505,12 +505,20 @@
 }
 .aside__container {
   width: 100%;
+  padding-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .aside__container {
+    padding-top: 64px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .aside__container {
     width: 444px;
+    padding-top: 0;
   }
 }
+
 /* Aside Block */
 .aside__container {
   height: 100%;
