@@ -4,7 +4,7 @@ import './js/02-quote';
 import './js/03-filters';
 import './js/04-search-form';
 import './js/05-modal-exercises';
-// import './js/06-modal-rating';
+import './js/06-modal-rating';
 import './js/07-modal-team';
 import './js/08-scroll-up';
 import './js/09-loader';
