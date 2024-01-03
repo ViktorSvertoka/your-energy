@@ -186,7 +186,7 @@ function createMarkup({
         <use href="${icons}#icon-favorites"></use>
       </svg>
     </button>
-  <button class="modal-exercises__btn-rating modal-exercises__btn" type="button">Give a rating</button>
+  <button class="modal-exercises__btn-rating modal-exercises__btn" type="button" data-id="${_id}">Give a rating</button>
 </div>
 `;
 }

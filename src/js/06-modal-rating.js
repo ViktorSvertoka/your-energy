@@ -1,11 +1,20 @@
-import APIService from './00-api';
+const modalExercises = document.querySelector('.modal-exercises');
+const modalIsOpen = document.querySelector('.modal-rating');
+const btnIsClosed = document.querySelector('.rating-close-btn');
 
-const apiService = new APIService();
+modalExercises.addEventListener('click', onExercisesCardClick);
+btnIsClosed.addEventListener('click', closeModalExercises);
 
-const modalOpen = document.querySelector('.modal-exercises__btn-favorites');
+function onExercisesCardClick(event) {
+  if (!event.target.closest('.modal-exercises__btn-rating')) {
+    return;
+  }
 
-modalOpen.addEventListener('click', modalIsOpen);
+  modalIsOpen.classList.remove('is-hidden');
+  modalExercises.classList.add('hidden');
+}
 
-function modalIsOpen() {
-  console.log('Ku Ku');
+function closeModalExercises() {
+  modalIsOpen.classList.add('is-hidden');
+  modalExercises.classList.remove('hidden');
 }
