@@ -261,7 +261,7 @@ overlay.addEventListener('click', function (event) {
   }
 });
 
-window.addEventListener('keydown', function (event) {
+document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape' && !modalExercises.classList.contains('hidden')) {
     closeModalExercises();
   }

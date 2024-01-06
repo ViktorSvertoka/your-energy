@@ -5,7 +5,6 @@ const btnIsClosed = document.querySelector('.rating-close-btn');
 modalExercises.addEventListener('click', onExercisesCardClick);
 btnIsClosed.addEventListener('click', closeModal);
 modalIsOpen.addEventListener('click', closeOverlay);
-
 document.addEventListener('keydown', onEscClick);
 
 function onExercisesCardClick(event) {
@@ -24,14 +23,12 @@ function closeModal() {
 
 function closeOverlay(event) {
   if (event.target == modalIsOpen) {
-    modalIsOpen.classList.add('is-hidden');
-    modalExercises.classList.remove('hidden');
+    closeModal();
   }
 }
 
 function onEscClick(event) {
-  if (event.code === 'Escape') {
-    modalIsOpen.classList.add('is-hidden');
-    modalExercises.classList.remove('hidden');
+  if (event.key === 'Escape') {
+    closeModal();
   }
 }
