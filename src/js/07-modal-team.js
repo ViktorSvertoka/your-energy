@@ -5,34 +5,25 @@ const teamCloseBtn = document.querySelector('.team__modal-close-btn');
 function onLinkClick(event) {
   event.preventDefault();
 
-  teamBackdrop.classList.remove('is-hidden');
-  document.body.classList.add('modal-open');
-
+  openModalStaff();
   addAllEventListeners();
 }
 
 function onEscClick(event) {
-  event.preventDefault();
-
-  if (event.code !== 'Escape') {
-    return;
+  if (event.code === 'Escape') {
+    closeAndRemoveListeners();
   }
-
-  closingModalStaff();
 }
 
 function onBackdropClick(event) {
-  if (event.target.closest('.team__wrapper')) {
-    return;
+  if (!event.target.closest('.team__wrapper')) {
+    closeAndRemoveListeners();
   }
-
-  closingModalStaff();
 }
 
 function onCloseBtnClick(event) {
   event.preventDefault();
-
-  closingModalStaff();
+  closeAndRemoveListeners();
 }
 
 function addAllEventListeners() {
@@ -41,11 +32,20 @@ function addAllEventListeners() {
   teamCloseBtn.addEventListener('click', onCloseBtnClick);
 }
 
-function closingModalStaff() {
+function closeAndRemoveListeners() {
   document.removeEventListener('keydown', onEscClick);
   teamBackdrop.removeEventListener('click', onBackdropClick);
   teamCloseBtn.removeEventListener('click', onCloseBtnClick);
 
+  closeModalStaff();
+}
+
+function openModalStaff() {
+  teamBackdrop.classList.remove('is-hidden');
+  document.body.classList.add('modal-open');
+}
+
+function closeModalStaff() {
   teamBackdrop.classList.add('is-hidden');
   document.body.classList.remove('modal-open');
 }

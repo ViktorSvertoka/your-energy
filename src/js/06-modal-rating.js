@@ -4,6 +4,7 @@ const btnIsClosed = document.querySelector('.rating-close-btn');
 
 modalExercises.addEventListener('click', onExercisesCardClick);
 btnIsClosed.addEventListener('click', closeModalExercises);
+modalIsOpen.addEventListener('click', closeModalExercises);
 
 function onExercisesCardClick(event) {
   if (!event.target.closest('.modal-exercises__btn-rating')) {
