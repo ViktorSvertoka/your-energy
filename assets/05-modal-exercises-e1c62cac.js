@@ -115,4 +115,4 @@
   Remove from favorites
   <svg class="btn-favorites__icon">
     <use href="${T}#icon-trash"></use>
-  </svg>`}function ye(){K.classList.add("hidden"),q.classList.add("hidden"),document.body.style.paddingRight="0px",document.body.style.overflow="auto"}q.addEventListener("click",function(e){e.target===q&&ye()});window.addEventListener("keydown",function(e){e.key==="Escape"&&!K.classList.contains("hidden")&&ye()});export{me as A,L as a,T as i};
+  </svg>`}function ye(){K.classList.add("hidden"),q.classList.add("hidden"),document.body.style.paddingRight="0px",document.body.style.overflow="auto"}q.addEventListener("click",function(e){e.target===q&&ye()});document.addEventListener("keydown",function(e){e.key==="Escape"&&!K.classList.contains("hidden")&&ye()});export{me as A,L as a,T as i};
