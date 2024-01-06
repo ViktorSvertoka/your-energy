@@ -3,8 +3,10 @@ const modalIsOpen = document.querySelector('.modal-rating');
 const btnIsClosed = document.querySelector('.rating-close-btn');
 
 modalExercises.addEventListener('click', onExercisesCardClick);
-btnIsClosed.addEventListener('click', closeModalExercises);
-modalIsOpen.addEventListener('click', closeModalExercises);
+btnIsClosed.addEventListener('click', closeModal);
+modalIsOpen.addEventListener('click', closeOverlay);
+
+document.addEventListener('keydown', onEscClick);
 
 function onExercisesCardClick(event) {
   if (!event.target.closest('.modal-exercises__btn-rating')) {
@@ -15,7 +17,21 @@ function onExercisesCardClick(event) {
   modalExercises.classList.add('hidden');
 }
 
-function closeModalExercises() {
+function closeModal() {
   modalIsOpen.classList.add('is-hidden');
   modalExercises.classList.remove('hidden');
+}
+
+function closeOverlay(event) {
+  if (event.target == modalIsOpen) {
+    modalIsOpen.classList.add('is-hidden');
+    modalExercises.classList.remove('hidden');
+  }
+}
+
+function onEscClick(event) {
+  if (event.code === 'Escape') {
+    modalIsOpen.classList.add('is-hidden');
+    modalExercises.classList.remove('hidden');
+  }
 }
