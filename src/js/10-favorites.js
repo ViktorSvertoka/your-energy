@@ -19,10 +19,8 @@ async function onExercisesCardClick(event) {
 
     const exerciseData = await apiService.getExercisesById(exerciseID);
 
-    const local = JSON.parse(localStorage.getItem('exerciseData'));
-
-    if (local?.some(item => item._id === exerciseData._id)) {
-      array = local.filter(item => item._id !== exerciseData._id);
+    if (array.some(item => item._id === exerciseData._id)) {
+      array = array.filter(item => item._id !== exerciseData._id);
     } else {
       array.push(exerciseData);
     }
