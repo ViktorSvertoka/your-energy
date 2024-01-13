@@ -5,7 +5,7 @@ const modalExercises = document.querySelector('.modal-exercises');
 
 modalExercises.addEventListener('click', onExercisesCardClick);
 
-let array = [];
+let array = JSON.parse(localStorage.getItem('exerciseData')) || [];
 
 async function onExercisesCardClick(event) {
   if (!event.target.closest('.modal-exercises__btn-favorites')) {
