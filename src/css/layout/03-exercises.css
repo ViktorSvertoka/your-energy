@@ -1,5 +1,3 @@
-/* exercises styles */
-
 .filters__list {
   max-width: 375px;
 }
@@ -91,8 +89,6 @@
   }
 }
 
-/* exercises cards */
-
 .exersices__list {
   display: flex;
   gap: 20px;
@@ -169,8 +165,6 @@
     gap: 30px;
   }
 }
-
-/* search form */
 
 .search__form {
   position: relative;
@@ -255,6 +249,7 @@
   background-color: transparent;
   color: var(--color-black);
 }
+
 @media screen and (min-width: 768px) {
   .exercises__btn.active {
     font-size: 16px;
@@ -566,15 +561,16 @@
   }
 }
 
-/* Aside Block */
 .aside__container {
   height: 100%;
 }
+
 .aside__container-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 @media screen and (min-width: 768px) {
   .aside__container-list {
     flex-direction: row;
@@ -582,6 +578,7 @@
     row-gap: 32px;
   }
 }
+
 .quote__container {
   cursor: initial;
   position: relative;
@@ -591,6 +588,7 @@
   border-radius: 20px;
   background-color: var(--color-black);
 }
+
 @media screen and (min-width: 768px) {
   .quote__container {
     width: 400px;
@@ -598,12 +596,14 @@
     padding: 40px 40px 40px 90px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .quote__container {
     width: 444px;
     min-height: 242px;
   }
 }
+
 .aside-svg__circle {
   position: absolute;
   top: 40px;
@@ -617,15 +617,18 @@
   border-radius: 50%;
   background: rgba(244, 244, 244, 0.2);
 }
+
 @media screen and (min-width: 768px) {
   .aside-svg__circle {
     top: 59px;
     left: 50px;
   }
 }
+
 .aside__svg {
   fill: var(--color-white);
 }
+
 .aside__commas-svg {
   position: absolute;
   top: 20px;
@@ -634,6 +637,7 @@
   height: 15px;
   fill: var(--color-white);
 }
+
 @media screen and (min-width: 768px) {
   .aside__commas-svg {
     top: 40px;
@@ -641,6 +645,7 @@
     height: 20px;
   }
 }
+
 .quote__title {
   margin-bottom: 8px;
   font-size: 20px;
@@ -648,29 +653,33 @@
   line-height: 1em;
   color: var(--color-white);
 }
+
 @media screen and (min-width: 768px) {
   .quote__title {
     font-size: 24px;
     line-height: 1.3em;
   }
 }
+
 .aside-quote__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 141px;
 }
+
 @media screen and (min-width: 768px) {
   .aside-quote__wrapper {
     min-height: 131px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .aside-quote__wrapper {
     min-height: 124px;
   }
 }
-/* Picture */
+
 .aside__img {
   border-radius: 20px;
   margin: 0 auto;
@@ -687,6 +696,7 @@
   width: 100%;
   height: 242px;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -702,6 +712,7 @@
     background-size: cover;
   }
 }
+
 @media screen and (min-width: 768px) {
   .aside__img {
     border-radius: 20px;
@@ -734,6 +745,7 @@
     }
   }
 }
+
 @media screen and (min-width: 1440px) {
   .aside__img {
     border-radius: 20px;
@@ -772,8 +784,6 @@
   filter: brightness(0.8);
 }
 
-/* BMI link styles */
-
 .aside__nail {
   position: relative;
 }
@@ -800,7 +810,6 @@
   color: rgba(244, 244, 244, 0.4);
 }
 
-/* White Card */
 .aside__white-card {
   cursor: initial;
   position: relative;
@@ -810,6 +819,7 @@
   border-radius: 20px;
   background-color: #fff;
 }
+
 @media screen and (min-width: 768px) {
   .aside__white-card {
     width: 400px;
@@ -817,12 +827,14 @@
     padding: 40px 40px 40px 90px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .aside__white-card {
     width: 444px;
     min-height: 315px;
   }
 }
+
 .white-card-svg__wrapper {
   position: absolute;
   top: 40px;
@@ -836,14 +848,17 @@
   border-radius: 50%;
   background-color: var(--color-black);
 }
+
 @media screen and (min-width: 768px) {
   .white-card-svg__wrapper {
     top: 59px;
   }
 }
+
 .aside__white-card-svg {
   fill: var(--color-white);
 }
+
 .aside__white-card-title {
   margin-bottom: 2px;
   font-size: 20px;
@@ -851,12 +866,14 @@
   line-height: 1em;
   color: var(--color-black);
 }
+
 @media screen and (min-width: 768px) {
   .aside__white-card-title {
     font-size: 24px;
     line-height: 1.3em;
   }
 }
+
 .aside__white-card-subtitle {
   margin-bottom: 16px;
   font-size: 14px;
@@ -864,6 +881,7 @@
   line-height: 1.3em;
   color: rgba(4, 4, 4, 0.7);
 }
+
 .aside__white-card-text {
   overflow: hidden;
   display: -webkit-box;
@@ -874,6 +892,7 @@
   line-height: 1.3em;
   color: var(--color-black);
 }
+
 @media screen and (min-width: 1440px) {
   .aside__white-card-text {
     -webkit-line-clamp: 9;
