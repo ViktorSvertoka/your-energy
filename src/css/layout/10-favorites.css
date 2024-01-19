@@ -1,5 +1,3 @@
-/* favorites styles */
-
 .favorites__title {
   margin-bottom: 20px;
   font-weight: 400;
@@ -347,8 +345,6 @@
     padding: 114px 148px 0;
   }
 }
-
-/* Favorites section card styles */
 
 .favorites__list {
   display: flex;

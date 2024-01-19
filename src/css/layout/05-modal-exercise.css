@@ -1,18 +1,14 @@
-/* modal-exercises styles */
 .overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-
   z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-
   z-index: 1;
-
   width: 100%;
   height: 100%;
   backdrop-filter: blur(3px);
@@ -190,10 +186,12 @@
   background-color: rgba(244, 244, 244, 0.2);
   content: '';
 }
+
 .modal-exercises__list::before {
   top: -10px;
   left: 0;
 }
+
 .modal-exercises__list::after {
   bottom: -10px;
   left: 0;
@@ -254,6 +252,7 @@
   line-height: 1.28;
   border-radius: 30px;
 }
+
 @media screen and (max-width: 767px) {
   .modal-exercises__btn {
     width: 100%;

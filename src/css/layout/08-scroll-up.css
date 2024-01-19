@@ -16,12 +16,14 @@
   margin: 0;
   z-index: 90;
 }
+
 @media screen and (min-width: 768px) {
   .scroll__go-top {
     width: 60px;
     height: 60px;
   }
 }
+
 .scroll__go-top:hover,
 .scroll__go-top:focus {
   background: #f4f4f4;
@@ -51,6 +53,7 @@
     height: 25px;
   }
 }
+
 .scroll__go-top:hover .scroll__icon,
 .scroll__go-top:focus .scroll__icon {
   fill: #242424;
