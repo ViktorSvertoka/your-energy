@@ -58,30 +58,6 @@ menuNavLinks.forEach(link => {
   });
 });
 
-// Переключение кнопок-ссылок
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const currentPath = window.location.pathname;
-
-//   if (currentPath.includes('index.html')) {
-//     const homeButton = document.getElementById('homeButton');
-//     homeButton.classList.add('active');
-//     homeButton.addEventListener('click', handleClick);
-//   } else if (currentPath.includes('favorites.html')) {
-//     const favoritesButton = document.getElementById('favoritesButton');
-//     favoritesButton.classList.add('active');
-//     favoritesButton.addEventListener('click', handleClick);
-//   }
-// });
-
-// const handleClick = event => {
-//   if (!event.currentTarget.classList.contains('active')) {
-//     alert('Button clicked!');
-//   } else {
-//     event.preventDefault();
-//   }
-// };
-
 document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
   const homeButton = document.getElementById('homeButton');
@@ -94,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     favoritesButton.classList.add('active');
     favoritesButton.addEventListener('click', handleClick);
   } else {
-    // Добавляем класс "active" на кнопку Home при первой загрузке страницы
     homeButton.classList.add('active');
     homeButton.addEventListener('click', handleClick);
   }
@@ -110,7 +85,6 @@ const handleClick = event => {
     event.preventDefault();
   }
 
-  // Убираем класс "active" с кнопки Home при переходе на favorites.html
   if (event.currentTarget === favoritesButton) {
     homeButton.classList.remove('active');
   }
