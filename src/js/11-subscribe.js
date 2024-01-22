@@ -6,7 +6,6 @@ import { Messages } from './13-messages.js';
 const form = document.getElementById('subscribeForm');
 const emailInput = form.querySelector('input[name="email"]');
 const subscribeBtn = document.getElementById('subscribeBtn');
-// console.dir(subscribeBtn);
 
 emailInput.addEventListener('input', handleEmailValidation);
 form.addEventListener('submit', subscribe);
@@ -20,7 +19,7 @@ function handleEmailValidation() {
   const emailValue = emailInput.value;
   const isValid = isValidEmail(emailValue);
 
-  // emailInput.style.borderColor = isValid ? 'green' : 'red';
+  emailInput.style.borderColor = isValid ? 'green' : 'red';
 }
 
 async function subscribe(e) {
@@ -47,7 +46,7 @@ async function subscribe(e) {
     );
     if (response.status >= 200 && response.status < 300) {
       form.reset();
-      // emailInput.style.borderColor = '';
+      emailInput.style.borderColor = '';
       return Messages.success(`${response.data.message}`);
     } else {
       console.error('Server Error:', response.status, response.statusText);
